@@ -51,42 +51,12 @@ PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libsensor_lge_cal.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsensor_lge_cal.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libsensor_lge_cal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsensor_lge_cal.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libremosaic_daemon.so:$(TARGET_COPY_OUT_VENDOR)/lib/libremosaic_daemon.so \
-    vendor/lge/msm8996-common/proprietary/etc/permissions/com.qti.location.sdk.xml:system/etc/permissions/com.qti.location.sdk.xml \
-    vendor/lge/msm8996-common/proprietary/etc/permissions/com.qualcomm.location.xml:system/etc/permissions/com.qualcomm.location.xml \
-    vendor/lge/msm8996-common/proprietary/framework/izat.xt.srv.jar:system/framework/izat.xt.srv.jar \
-    vendor/lge/msm8996-common/proprietary/etc/permissions/izat.xt.srv.xml:system/etc/permissions/izat.xt.srv.xml \
-    vendor/lge/msm8996-common/proprietary/framework/com.qti.location.sdk.jar:system/framework/com.qti.location.sdk.jar \
-    vendor/lge/msm8996-common/proprietary/etc/permissions/privapp-permissions-com.qualcomm.location.xml:system/etc/permissions/privapp-permissions-com.qualcomm.location.xml \
-    vendor/lge/msm8996-common/proprietary/lib64/liblocationservice_jni.so:system/lib64/liblocationservice_jni.so \
-    vendor/lge/msm8996-common/proprietary/lib/vendor.qti.gnss@1.0.so:system/lib/vendor.qti.gnss@1.0.so \
-    vendor/lge/msm8996-common/proprietary/lib/vendor.qti.gnss@1.1.so:system/lib/vendor.qti.gnss@1.1.so \
-    vendor/lge/msm8996-common/proprietary/lib/vendor.qti.gnss@1.2.so:system/lib/vendor.qti.gnss@1.2.so \
-    vendor/lge/msm8996-common/proprietary/lib/vendor.qti.gnss@2.0.so:system/lib/vendor.qti.gnss@2.0.so \
-    vendor/lge/msm8996-common/proprietary/lib/vendor.qti.gnss@2.1.so:system/lib/vendor.qti.gnss@2.1.so \
-    vendor/lge/msm8996-common/proprietary/lib64/libxt_native.so:system/lib64/libxt_native.so \
-    vendor/lge/msm8996-common/proprietary/lib64/vendor.qti.gnss@1.0.so:system/lib64/vendor.qti.gnss@1.0.so \
-    vendor/lge/msm8996-common/proprietary/lib64/vendor.qti.gnss@1.1.so:system/lib64/vendor.qti.gnss@1.1.so \
-    vendor/lge/msm8996-common/proprietary/lib64/vendor.qti.gnss@1.2.so:system/lib64/vendor.qti.gnss@1.2.so \
-    vendor/lge/msm8996-common/proprietary/lib64/vendor.qti.gnss@2.0.so:system/lib64/vendor.qti.gnss@2.0.so \
-    vendor/lge/msm8996-common/proprietary/lib64/vendor.qti.gnss@2.1.so:system/lib64/vendor.qti.gnss@2.1.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.gnss@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.gnss@1.0.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.gnss@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.gnss@1.1.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.gnss@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.gnss@1.2.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.gnss@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.gnss@2.0.so \
     vendor/lge/msm8996-common/proprietary/vendor/bin/hvdcp_opti:$(TARGET_COPY_OUT_VENDOR)/bin/hvdcp_opti \
     vendor/lge/msm8996-common/proprietary/vendor/bin/hw/vendor.lge.hardware.sysnode@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.lge.hardware.sysnode@1.0-service \
-    vendor/lge/msm8996-common/proprietary/vendor/bin/hw/vendor.qti.gnss@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.gnss@1.0-service \
-    vendor/lge/msm8996-common/proprietary/vendor/bin/loc_launcher:$(TARGET_COPY_OUT_VENDOR)/bin/loc_launcher \
-    vendor/lge/msm8996-common/proprietary/vendor/bin/lowi-server:$(TARGET_COPY_OUT_VENDOR)/bin/lowi-server \
-    vendor/lge/msm8996-common/proprietary/vendor/bin/slim_daemon:$(TARGET_COPY_OUT_VENDOR)/bin/slim_daemon \
     vendor/lge/msm8996-common/proprietary/vendor/bin/qseecomd:$(TARGET_COPY_OUT_VENDOR)/bin/qseecomd \
     vendor/lge/msm8996-common/proprietary/vendor/bin/thermal-engine:$(TARGET_COPY_OUT_VENDOR)/bin/thermal-engine \
     vendor/lge/msm8996-common/proprietary/vendor/bin/time_daemon:$(TARGET_COPY_OUT_VENDOR)/bin/time_daemon \
-    vendor/lge/msm8996-common/proprietary/vendor/bin/xtra-daemon:$(TARGET_COPY_OUT_VENDOR)/bin/xtra-daemon \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/cacert_location.pem:$(TARGET_COPY_OUT_VENDOR)/etc/cacert_location.pem \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/xtra_root_cert.pem:$(TARGET_COPY_OUT_VENDOR)/etc/xtra_root_cert.pem \
     vendor/lge/msm8996-common/proprietary/vendor/etc/init/vendor.lge.hardware.sysnode-1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.lge.hardware.sysnode-1.0-service.rc \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/init/vendor.qti.gnss@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.gnss@1.0-service.rc \
     vendor/lge/msm8996-common/proprietary/vendor/framework/vendor.lge.hardware.sysnode-V1.0-java.jar:$(TARGET_COPY_OUT_VENDOR)/framework/vendor.lge.hardware.sysnode-V1.0-java.jar \
     vendor/lge/msm8996-common/proprietary/vendor/lib/vendor.lge.hardware.sysnode@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.lge.hardware.sysnode@1.0.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/hw/vendor.lge.hardware.sysnode@1.0-client.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.lge.hardware.sysnode@1.0-client.so \
@@ -205,11 +175,9 @@ PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/egl/libq3dtools_esx.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/libq3dtools_esx.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/egl/libq3dtools_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/libq3dtools_adreno.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/hw/sensors.vr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/sensors.vr.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/hw/vendor.qti.gnss@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.gnss@1.0-impl.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/hw/vulkan.msm8996.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vulkan.msm8996.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libC2D2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libC2D2.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libCB.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCB.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libDRPlugin.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libDRPlugin.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libGPreqcancel.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libGPreqcancel.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libGPreqcancel_svc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libGPreqcancel_svc.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libOpenCL.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libOpenCL.so \
@@ -218,37 +186,20 @@ PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libSecureUILib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libSecureUILib.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libStDrvInt.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libStDrvInt.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libadreno_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libadreno_utils.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libalarmservice_jni.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libalarmservice_jni.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libbccQTI.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbccQTI.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libc2d30_bltlib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libc2d30_bltlib.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libdataitems.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdataitems.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libdrmfs.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdrmfs.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libdrmtime.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdrmtime.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libdrplugin_client.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdrplugin_client.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libevent_observer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libevent_observer.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libflp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libflp.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libgdtap.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgdtap.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libgeofence.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgeofence.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libgpustats.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgpustats.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libgsl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgsl.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libhdr_tm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhdr_tm.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libizat_client_api.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libizat_client_api.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libloc_api_v02.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libloc_api_v02.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libizat_core.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libizat_core.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/liblbs_core.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblbs_core.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libllvm-glnext.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libllvm-glnext.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libllvm-qcom.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libllvm-qcom.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libloc_ds_api.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libloc_ds_api.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/liblocationservice.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblocationservice.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/liblocationservice_glue.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblocationservice_glue.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/liblowi_client.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblowi_client.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/liblowi_wifihal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblowi_wifihal.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libmm-hdcpmgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmm-hdcpmgr.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libmmi.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmi.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libmmi_jni.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmi_jni.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libmmosal_proprietary.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmosal_proprietary.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libqisl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqisl.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libslimclient.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libslimclient.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/librpmb.so:$(TARGET_COPY_OUT_VENDOR)/lib64/librpmb.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/librs_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib64/librs_adreno.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/librs_adreno_sha1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/librs_adreno_sha1.so \
@@ -269,10 +220,7 @@ PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libsdsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsdsprpc.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libvideoutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvideoutils.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libthermalioctl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libthermalioctl.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libtinyxml2_1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtinyxml2_1.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libulp2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libulp2.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libxtadapter.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libxtadapter.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libxtwifi_ulp_adaptor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libxtwifi_ulp_adaptor.so
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libtinyxml2_1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtinyxml2_1.so
 
 # Privapp-permissions needed for aex
 PRODUCT_COPY_FILES += \
@@ -616,7 +564,6 @@ PRODUCT_COPY_FILES += \
 
 # Hexedited blobs
 PRODUCT_COPY_FILES += \
-    vendor/lge/msm8996-common/proprietary/lib64/android.hardware.gnss@8.0.so:system/lib64/android.hardware.gnss@8.0.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/lib-sec-disp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-sec-disp.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libhui.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhui.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libux.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libux.so
@@ -745,7 +692,7 @@ PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/etc/permissions/telephonyservice.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/telephonyservice.xml \
     vendor/lge/msm8996-common/proprietary/framework/QtiTelephonyServicelibrary.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/QtiTelephonyServicelibrary.jar \
     vendor/lge/msm8996-common/proprietary/framework/qcrilhook.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/qcrilhook.jar \
-    vendor/lge/msm8996-common/proprietary/framework/qti-telephony-common.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/qti-telephony-common.jar \
+    vendor/lge/msm8996-common/proprietary/product/framework/qti-telephony-common.jar:$(TARGET_COPY_OUT_SYSTEM)/product/framework/qti-telephony-common.jar \
     vendor/lge/msm8996-common/proprietary/vendor/bin/ATFWD-daemon:$(TARGET_COPY_OUT_VENDOR)/bin/ATFWD-daemon \
     vendor/lge/msm8996-common/proprietary/vendor/bin/netmgrd:$(TARGET_COPY_OUT_VENDOR)/bin/netmgrd \
     vendor/lge/msm8996-common/proprietary/vendor/bin/port-bridge:$(TARGET_COPY_OUT_VENDOR)/bin/port-bridge \
@@ -790,7 +737,51 @@ PRODUCT_COPY_FILES += \
 
 # Haxx
 PRODUCT_COPY_FILES += \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libbase-hax.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbase-hax.so
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libbase-hax.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbase-hax.so \
+
+# GPS - from LA.UM.8.6.r1-01900-89xx.0 
+PRODUCT_COPY_FILES += \
+    vendor/lge/msm8996-common/proprietary/etc/permissions/com.qti.location.sdk.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.qti.location.sdk.xml \
+    vendor/lge/msm8996-common/proprietary/etc/permissions/com.qualcomm.location.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.qualcomm.location.xml \
+    vendor/lge/msm8996-common/proprietary/etc/permissions/izat.xt.srv.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/izat.xt.srv.xml \
+    vendor/lge/msm8996-common/proprietary/etc/permissions/privapp-permissions-com.qualcomm.location.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-com.qualcomm.location.xml \
+    vendor/lge/msm8996-common/proprietary/framework/com.qti.location.sdk.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/com.qti.location.sdk.jar \
+    vendor/lge/msm8996-common/proprietary/framework/izat.xt.srv.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/izat.xt.srv.jar \
+    vendor/lge/msm8996-common/proprietary/lib64/liblocationservice_jni.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/liblocationservice_jni.so \
+    vendor/lge/msm8996-common/proprietary/lib64/libxt_native.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libxt_native.so \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/loc_launcher:$(TARGET_COPY_OUT_VENDOR)/bin/loc_launcher \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/lowi-server:$(TARGET_COPY_OUT_VENDOR)/bin/lowi-server \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/slim_daemon:$(TARGET_COPY_OUT_VENDOR)/bin/slim_daemon \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/xtra-daemon:$(TARGET_COPY_OUT_VENDOR)/bin/xtra-daemon \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/cacert_location.pem:$(TARGET_COPY_OUT_VENDOR)/etc/cacert_location.pem \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/vintf/manifest/vendor.qti.gnss@3.0-service.xml:$(TARGET_COPY_OUT_VENDOR)/etc/vintf/manifest/vendor.qti.gnss@3.0-service.xml \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/xtra_root_cert.pem:$(TARGET_COPY_OUT_VENDOR)/etc/xtra_root_cert.pem \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/hw/vendor.qti.gnss@3.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.gnss@3.0-impl.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libdataitems.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdataitems.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libgdtap.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgdtap.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libizat_client_api.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libizat_client_api.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libizat_core.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libizat_core.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/liblbs_core.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblbs_core.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libloc_api_v02.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libloc_api_v02.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/liblocationservice_glue.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblocationservice_glue.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/liblocationservice.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblocationservice.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/liblowi_client.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblowi_client.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/liblowi_wifihal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblowi_wifihal.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libqdma_file_agent.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqdma_file_agent.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libslimclient.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libslimclient.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libxtadapter.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libxtadapter.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.gnss@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.gnss@1.0.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.gnss@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.gnss@1.1.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.gnss@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.gnss@1.2.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.gnss@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.gnss@2.0.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.gnss@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.gnss@2.1.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.gnss@3.0-service.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.gnss@3.0-service.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.gnss@3.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.gnss@3.0.so \
+
+# GPS - Prebuilt much haxx
+PRODUCT_COPY_FILES += \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libwifi-hal-ctrl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwifi-hal-ctrl.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libwifi-hal-ctrl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwifi-hal-ctrl.so \
 
 PRODUCT_PACKAGES += \
     gatekeeper.msm8996 \
@@ -812,4 +803,5 @@ PRODUCT_PACKAGES += \
     uceShimService \
     ims \
     QtiTelephonyService \
-    qcrilmsgtunnel
+    qcrilmsgtunnel \
+    com.qualcomm.location
