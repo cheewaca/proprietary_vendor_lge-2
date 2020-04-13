@@ -133,3 +133,19 @@ android_app_import {
 		enabled: false,
 	},
 }
+
+cc_prebuilt_library_shared {
+	name: "libsdm-disp-vndapis",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libsdm-disp-vndapis.so"],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	soc_specific: true,
+}
