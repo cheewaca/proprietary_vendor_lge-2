@@ -742,6 +742,11 @@ PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libthermalfeature.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libthermalfeature.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libthermalioctl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libthermalioctl.so \
 
+# Time services - from daisy - daisy_sprout:10/QKQ1.191002.002/V11.0.2.0.QDLMIXM
+PRODUCT_COPY_FILES += \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/time_daemon:$(TARGET_COPY_OUT_VENDOR)/bin/time_daemon \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libtime_genoff.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtime_genoff.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libtime_genoff.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtime_genoff.so \
 
 PRODUCT_PACKAGES += \
     gatekeeper.msm8996 \
@@ -756,7 +761,6 @@ PRODUCT_PACKAGES += \
     CneApp \
     IWlanService \
     dpmserviceapp \
-    libtime_genoff \
     TimeService \
     WfdService \
     WfdCommon \
