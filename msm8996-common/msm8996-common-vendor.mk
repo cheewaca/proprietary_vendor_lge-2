@@ -549,7 +549,7 @@ PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.imsrtpservice@1.0_vendor.so \
 
-# IMS - from LA.UM.7.5.r1-04800-8x96.0
+# IMS - from oneplus3t - OnePlus/OnePlus3/OnePlus3T:9/PKQ1.181203.001/1911042108 - OOS 9.0.6
 PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.ims.rcsconfig@1.0.so \
 
@@ -589,11 +589,11 @@ PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libqmiservices.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqmiservices.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libsmemlog.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsmemlog.so \
 
-# QMI - from LA.UM.7.5.r1-04800-8x96.0
+# QMI - from oneplus3t - OnePlus/OnePlus3/OnePlus3T:9/PKQ1.181203.001/1911042108 - OOS 9.0.6
 PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libpdmapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpdmapper.so \
 
-# QMI - from LA.UM.8.6.r1-01900-89xx.0
+# QMI - from daisy - daisy_sprout:10/QKQ1.191002.002/V11.0.2.0.QDLMIXM
 PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libqmi_cci.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqmi_cci.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libqmi_cci.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqmi_cci.so \
@@ -639,7 +639,7 @@ PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0_vendor.so \
     vendor/lge/msm8996-common/proprietary/vendor/radio/qcril_database/qcril.db:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/qcril.db \
 
-# RIL - from LA.UM.8.6.r1-01900-89xx.0
+# RIL - from daisy - daisy_sprout:10/QKQ1.191002.002/V11.0.2.0.QDLMIXM
 PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/bin/adpl:$(TARGET_COPY_OUT_VENDOR)/bin/adpl \
     vendor/lge/msm8996-common/proprietary/vendor/etc/init/dataadpl.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dataadpl.rc \
