@@ -20,31 +20,6 @@ LOCAL_PATH := $(call my-dir)
 ifneq ($(filter g5 h830 h850 rs988 v20 h910 h915 h918 h990 vs995 us996 ls997 g6 h870 h872 us997 h870ds,$(TARGET_DEVICE)),)
 
 ifeq ($(QCPATH),)
-include $(CLEAR_VARS)
-LOCAL_MODULE := gatekeeper.msm8996
-LOCAL_MODULE_OWNER := lge
-LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/hw/gatekeeper.msm8996.so
-LOCAL_SRC_FILES_32 := proprietary/vendor/lib/hw/gatekeeper.msm8996.so
-LOCAL_MULTILIB := both
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_SUFFIX := .so
-LOCAL_MODULE_RELATIVE_PATH := hw
-LOCAL_PROPRIETARY_MODULE := true
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := keystore.msm8996
-LOCAL_MODULE_OWNER := lge
-LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/hw/keystore.msm8996.so
-LOCAL_SRC_FILES_32 := proprietary/vendor/lib/hw/keystore.msm8996.so
-LOCAL_MULTILIB := both
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_SUFFIX := .so
-LOCAL_MODULE_RELATIVE_PATH := hw
-LOCAL_PROPRIETARY_MODULE := true
-include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := libaudio_log_utils

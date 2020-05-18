@@ -79,7 +79,6 @@ PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/bin/loc_launcher:$(TARGET_COPY_OUT_VENDOR)/bin/loc_launcher \
     vendor/lge/msm8996-common/proprietary/vendor/bin/lowi-server:$(TARGET_COPY_OUT_VENDOR)/bin/lowi-server \
     vendor/lge/msm8996-common/proprietary/vendor/bin/slim_daemon:$(TARGET_COPY_OUT_VENDOR)/bin/slim_daemon \
-    vendor/lge/msm8996-common/proprietary/vendor/bin/qseecomd:$(TARGET_COPY_OUT_VENDOR)/bin/qseecomd \
     vendor/lge/msm8996-common/proprietary/vendor/bin/time_daemon:$(TARGET_COPY_OUT_VENDOR)/bin/time_daemon \
     vendor/lge/msm8996-common/proprietary/vendor/bin/xtra-daemon:$(TARGET_COPY_OUT_VENDOR)/bin/xtra-daemon \
     vendor/lge/msm8996-common/proprietary/vendor/etc/cacert_location.pem:$(TARGET_COPY_OUT_VENDOR)/etc/cacert_location.pem \
@@ -92,17 +91,10 @@ PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/lib/hw/vendor.lge.hardware.sysnode@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.lge.hardware.sysnode@1.0-impl.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/vendor.qti.hardware.tui_comm@1.0_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.tui_comm@1.0_vendor.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libmm-qcamera.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmm-qcamera.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libQSEEComAPI.so:$(TARGET_COPY_OUT_VENDOR)/lib/libQSEEComAPI.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libStDrvInt.so:$(TARGET_COPY_OUT_VENDOR)/lib/libStDrvInt.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libcppf.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcppf.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libmm-hdcpmgr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmm-hdcpmgr.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libmmi.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmi.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libmmi_jni.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmi_jni.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libmmosal_proprietary.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmosal_proprietary.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/liboemcrypto.so:$(TARGET_COPY_OUT_VENDOR)/lib/liboemcrypto.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libqisl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqisl.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/librpmb.so:$(TARGET_COPY_OUT_VENDOR)/lib/librpmb.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libssd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libssd.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libvideoutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvideoutils.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libSJFingerDetect.so:$(TARGET_COPY_OUT_VENDOR)/lib/libSJFingerDetect.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/rfsa/adsp/fluence_voiceplus_module.so.1:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/fluence_voiceplus_module.so.1 \
@@ -114,15 +106,8 @@ PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/hw/sensors.vr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/sensors.vr.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/hw/vendor.qti.gnss@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.gnss@1.0-impl.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libDRPlugin.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libDRPlugin.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libGPreqcancel.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libGPreqcancel.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libGPreqcancel_svc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libGPreqcancel_svc.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libQSEEComAPI.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libQSEEComAPI.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libSecureUILib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libSecureUILib.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libStDrvInt.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libStDrvInt.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libalarmservice_jni.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libalarmservice_jni.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libdataitems.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdataitems.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libdrmfs.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdrmfs.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libdrmtime.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdrmtime.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libdrplugin_client.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdrplugin_client.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libevent_observer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libevent_observer.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libflp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libflp.so \
@@ -141,13 +126,8 @@ PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libmmi.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmi.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libmmi_jni.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmi_jni.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libmmosal_proprietary.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmosal_proprietary.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libqisl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqisl.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libslimclient.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libslimclient.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/librpmb.so:$(TARGET_COPY_OUT_VENDOR)/lib64/librpmb.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libsecureui.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsecureui.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libsecureui_svcsock.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsecureui_svcsock.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libspl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libspl.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libssd.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libssd.so \
     vendor/lge/msm8996-common/proprietary/lib/libsdsprpc_system.so:system/lib/libsdsprpc_system.so \
     vendor/lge/msm8996-common/proprietary/lib64/libsdsprpc_system.so:system/lib64/libsdsprpc_system.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libsdsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsdsprpc.so \
@@ -481,16 +461,9 @@ PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/etc/perf/targetconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/targetconfig.xml \
     vendor/lge/msm8996-common/proprietary/vendor/etc/perf/targetresourceconfigs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/targetresourceconfigs.xml \
 
-# Widevine - from Marlin QP1A.190711.020
-PRODUCT_COPY_FILES += \
-    vendor/lge/msm8996-common/proprietary/vendor/bin/hw/android.hardware.drm@1.1-service.widevine:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.drm@1.1-service.widevine \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.1-service.widevine.rc \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libwvhidl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwvhidl.so
-
 # Hexedited blobs
 PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/lib64/android.hardware.gnss@8.0.so:system/lib64/android.hardware.gnss@8.0.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/lib-sec-disp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-sec-disp.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libhui.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhui.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libux.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libux.so
 
@@ -761,12 +734,89 @@ PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libtime_genoff.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtime_genoff.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libtime_genoff.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtime_genoff.so \
 
+# DRM - from H870 V30B
+PRODUCT_COPY_FILES += \
+    vendor/lge/msm8996-common/proprietary/lib/libsecureui_svcsock_system.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsecureui_svcsock_system.so \
+    vendor/lge/msm8996-common/proprietary/lib/libcrypto-ss.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libcrypto-ss.so \
+    vendor/lge/msm8996-common/proprietary/lib64/libsecureui_svcsock_system.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libsecureui_svcsock_system.so \
+    vendor/lge/msm8996-common/proprietary/lib64/libcryptfs_hw.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libcryptfs_hw.so \
+    vendor/lge/msm8996-common/proprietary/lib64/libcrypto-ss.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libcrypto-ss.so \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/qseecomd:$(TARGET_COPY_OUT_VENDOR)/bin/qseecomd \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libcpion.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcpion.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libcppf.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcppf.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libhdcpsrm.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhdcpsrm.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/liboemcrypto.so:$(TARGET_COPY_OUT_VENDOR)/lib/liboemcrypto.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libmm-hdcpmgr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmm-hdcpmgr.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libQSEEComAPI.so:$(TARGET_COPY_OUT_VENDOR)/lib/libQSEEComAPI.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libtzdrmgenprov.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtzdrmgenprov.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libcpion.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcpion.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libdrmfs.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdrmfs.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libdrmtime.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdrmtime.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libGPreqcancel_svc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libGPreqcancel_svc.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libGPreqcancel.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libGPreqcancel.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libhdcpsrm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhdcpsrm.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/liboemcrypto.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liboemcrypto.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libqisl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqisl.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libQSEEComAPI.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libQSEEComAPI.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/librpmb.so:$(TARGET_COPY_OUT_VENDOR)/lib64/librpmb.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libspl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libspl.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libssd.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libssd.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libStDrvInt.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libStDrvInt.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libtzdrmgenprov.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtzdrmgenprov.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libmm-hdcpmgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmm-hdcpmgr.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libsecureui.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsecureui.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libSecureUILib.so:$(TARGET_COPY_OUT_VENDOR)/lib/libSecureUILib.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libsecureui_svcsock.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsecureui_svcsock.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libsecureui.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsecureui.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libSecureUILib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libSecureUILib.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libsecureui_svcsock.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsecureui_svcsock.so \
+
+
+# DRM QTEE - from H870 V30B
+PRODUCT_COPY_FILES += \
+    vendor/lge/msm8996-common/proprietary/lib/libGPQTEEC_system.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libGPQTEEC_system.so \
+    vendor/lge/msm8996-common/proprietary/lib/libGPTEE_system.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libGPTEE_system.so \
+    vendor/lge/msm8996-common/proprietary/lib/libQTEEConnector_system.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libQTEEConnector_system.so \
+    vendor/lge/msm8996-common/proprietary/lib/vendor.qti.hardware.qteeconnector@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.qti.hardware.qteeconnector@1.0.so \
+    vendor/lge/msm8996-common/proprietary/lib64/libGPQTEEC_system.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libGPQTEEC_system.so \
+    vendor/lge/msm8996-common/proprietary/lib64/libGPTEE_system.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libGPTEE_system.so \
+    vendor/lge/msm8996-common/proprietary/lib64/libQTEEConnector_system.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libQTEEConnector_system.so \
+    vendor/lge/msm8996-common/proprietary/lib64/vendor.qti.hardware.qteeconnector@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.qti.hardware.qteeconnector@1.0.so \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libGPQTEEC_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libGPQTEEC_vendor.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libGPTEE_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libGPTEE_vendor.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libQTEEConnector_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libQTEEConnector_vendor.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libGPQTEEC_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libGPQTEEC_vendor.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libGPTEE_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libGPTEE_vendor.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libQTEEConnector_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libQTEEConnector_vendor.so \
+
+# DRM TUI - from H870 V30B
+PRODUCT_COPY_FILES += \
+    vendor/lge/msm8996-common/proprietary/lib/vendor.qti.hardware.tui_comm@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.qti.hardware.tui_comm@1.0.so \
+    vendor/lge/msm8996-common/proprietary/lib64/vendor.qti.hardware.tui_comm@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.qti.hardware.tui_comm@1.0.so \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc \
+
+# DRM Widevine - from H870 V30B
+PRODUCT_COPY_FILES += \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/hw/android.hardware.drm@1.1-service.widevine:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.drm@1.1-service.widevine \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.1-service.widevine.rc \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libwvhidl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwvhidl.so \
+
+# Gatekeeper & Keystore - from H870 V30B
+PRODUCT_COPY_FILES += \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/hw/gatekeeper.msm8996.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/gatekeeper.msm8996.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/hw/gatekeeper.msm8996.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/gatekeeper.msm8996.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/hw/keystore.msm8996.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/keystore.msm8996.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/hw/keystore.msm8996.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/keystore.msm8996.so \
+
 PRODUCT_PACKAGES += \
-    gatekeeper.msm8996 \
 	HotwordEnrollmentOKGoogleWCD9335 \
 	HotwordEnrollmentTGoogleWCD9335 \
 	HotwordEnrollmentXGoogleWCD9335 \
-    keystore.msm8996 \
     libaudio_log_utils \
     libsdm-disp-vndapis \
     libthermalclient \
