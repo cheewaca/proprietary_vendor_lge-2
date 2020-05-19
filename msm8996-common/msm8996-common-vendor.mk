@@ -1,5 +1,5 @@
 # Copyright (C) 2016 The CyanogenMod Project
-# Copyright (C) 2017-2018 The LineageOS Project
+# Copyright (C) 2017-2020 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -19,6 +19,237 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/lge/msm8996-common
 
 PRODUCT_COPY_FILES += \
+    vendor/lge/msm8996-common/proprietary/bin/wfdservice:$(TARGET_COPY_OUT_SYSTEM)/bin/wfdservice \
+    vendor/lge/msm8996-common/proprietary/etc/cne/Nexus/ATT/ATT_profiles.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/cne/Nexus/ATT/ATT_profiles.xml \
+    vendor/lge/msm8996-common/proprietary/etc/cne/Nexus/ROW/ROW_profiles.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/cne/Nexus/ROW/ROW_profiles.xml \
+    vendor/lge/msm8996-common/proprietary/etc/cne/Nexus/VZW/VZW_profiles.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/cne/Nexus/VZW/VZW_profiles.xml \
+    vendor/lge/msm8996-common/proprietary/etc/init/wfdservice.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/wfdservice.rc \
+    vendor/lge/msm8996-common/proprietary/etc/permissions/audiosphere.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/audiosphere.xml \
+    vendor/lge/msm8996-common/proprietary/etc/permissions/com.qti.location.sdk.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.qti.location.sdk.xml \
+    vendor/lge/msm8996-common/proprietary/etc/permissions/com.qualcomm.location.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.qualcomm.location.xml \
+    vendor/lge/msm8996-common/proprietary/etc/permissions/com.qualcomm.qti.imscmservice.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.qualcomm.qti.imscmservice.xml \
+    vendor/lge/msm8996-common/proprietary/etc/permissions/izat.xt.srv.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/izat.xt.srv.xml \
+    vendor/lge/msm8996-common/proprietary/etc/permissions/privapp-permissions-com.google.android.hiddenmenu.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-com.google.android.hiddenmenu.xml \
+    vendor/lge/msm8996-common/proprietary/etc/permissions/privapp-permissions-com.qualcomm.location.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-com.qualcomm.location.xml \
+    vendor/lge/msm8996-common/proprietary/etc/permissions/privapp-permissions-org.lineageos.settings.device.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-org.lineageos.settings.device.xml \
+    vendor/lge/msm8996-common/proprietary/etc/permissions/qcrilhook.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/qcrilhook.xml \
+    vendor/lge/msm8996-common/proprietary/etc/permissions/qti-vzw-ims-internal.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/qti-vzw-ims-internal.xml \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/permissions/qti_libpermissions.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/qti_libpermissions.xml \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/permissions/qti_permissions.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/qti_permissions.xml \
+    vendor/lge/msm8996-common/proprietary/etc/permissions/telephonyservice.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/telephonyservice.xml \
+    vendor/lge/msm8996-common/proprietary/etc/wfdconfig.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/wfdconfig.xml \
+    vendor/lge/msm8996-common/proprietary/etc/wfdconfigsink.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/wfdconfigsink.xml \
+    vendor/lge/msm8996-common/proprietary/framework/QtiTelephonyServicelibrary.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/QtiTelephonyServicelibrary.jar \
+    vendor/lge/msm8996-common/proprietary/framework/audiosphere.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/audiosphere.jar \
+    vendor/lge/msm8996-common/proprietary/framework/com.qti.dpmframework.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/com.qti.dpmframework.jar \
+    vendor/lge/msm8996-common/proprietary/framework/com.qti.location.sdk.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/com.qti.location.sdk.jar \
+    vendor/lge/msm8996-common/proprietary/framework/com.qualcomm.qti.imscmservice@1.0-java.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/com.qualcomm.qti.imscmservice@1.0-java.jar \
+    vendor/lge/msm8996-common/proprietary/framework/izat.xt.srv.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/izat.xt.srv.jar \
+    vendor/lge/msm8996-common/proprietary/framework/qcrilhook.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/qcrilhook.jar \
+    vendor/lge/msm8996-common/proprietary/framework/vendor.lge.hardware.bootproperty-V1.0-java.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/vendor.lge.hardware.bootproperty-V1.0-java.jar \
+    vendor/lge/msm8996-common/proprietary/framework/vendor.lge.hardware.configstore-V1.0-java.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/vendor.lge.hardware.configstore-V1.0-java.jar \
+    vendor/lge/msm8996-common/proprietary/framework/vendor.lge.hardware.platform-V1.0-java.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/vendor.lge.hardware.platform-V1.0-java.jar \
+    vendor/lge/msm8996-common/proprietary/framework/vendor.lge.hardware.platform-V1.1-java.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/vendor.lge.hardware.platform-V1.1-java.jar \
+    vendor/lge/msm8996-common/proprietary/framework/vendor.lge.hardware.property-V1.0-java.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/vendor.lge.hardware.property-V1.0-java.jar \
+    vendor/lge/msm8996-common/proprietary/framework/vendor.lge.hardware.property-V1.1-java.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/vendor.lge.hardware.property-V1.1-java.jar \
+    vendor/lge/msm8996-common/proprietary/framework/vendor.lge.hardware.property-V1.2-java.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/vendor.lge.hardware.property-V1.2-java.jar \
+    vendor/lge/msm8996-common/proprietary/vendor/framework/vendor.lge.hardware.sysnode-V1.0-java.jar:$(TARGET_COPY_OUT_VENDOR)/framework/vendor.lge.hardware.sysnode-V1.0-java.jar \
+    vendor/lge/msm8996-common/proprietary/vendor/framework/vendor.qti.hardware.fingerprint-V1.0-java.jar:$(TARGET_COPY_OUT_VENDOR)/framework/vendor.qti.hardware.fingerprint-V1.0-java.jar \
+    vendor/lge/msm8996-common/proprietary/framework/vendor.qti.hardware.sensorscalibrate-V1.0-java.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/vendor.qti.hardware.sensorscalibrate-V1.0-java.jar \
+    vendor/lge/msm8996-common/proprietary/framework/vendor.qti.voiceprint-V1.0-java.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/vendor.qti.voiceprint-V1.0-java.jar \
+    vendor/lge/msm8996-common/proprietary/lib/com.qualcomm.qti.wifidisplayhal@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/com.qualcomm.qti.wifidisplayhal@1.0.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.qualcomm.qti.wifidisplayhal@1.0.so \
+    vendor/lge/msm8996-common/proprietary/lib/extractors/libmmparser.so:$(TARGET_COPY_OUT_SYSTEM)/lib/extractors/libmmparser.so \
+    vendor/lge/msm8996-common/proprietary/lib/libFileMux.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libFileMux.so \
+    vendor/lge/msm8996-common/proprietary/lib/libOmxMux.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libOmxMux.so \
+    vendor/lge/msm8996-common/proprietary/lib/libaudioroute.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libaudioroute.so \
+    vendor/lge/msm8996-common/proprietary/lib/libdovi.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libdovi.so \
+    vendor/lge/msm8996-common/proprietary/lib/libmdsprpc_system.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libmdsprpc_system.so \
+    vendor/lge/msm8996-common/proprietary/lib/libmmosal.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libmmosal.so \
+    vendor/lge/msm8996-common/proprietary/lib/libmmparser_lite.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libmmparser_lite.so \
+    vendor/lge/msm8996-common/proprietary/lib/libmmrtpdecoder.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libmmrtpdecoder.so \
+    vendor/lge/msm8996-common/proprietary/lib/libmmrtpencoder.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libmmrtpencoder.so \
+    vendor/lge/msm8996-common/proprietary/lib/libqct_resampler.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libqct_resampler.so \
+    vendor/lge/msm8996-common/proprietary/lib/libsdsprpc_system.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsdsprpc_system.so \
+    vendor/lge/msm8996-common/proprietary/lib/libsymphony-1.1.3.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsymphony-1.1.3.so \
+    vendor/lge/msm8996-common/proprietary/lib/libsymphony-cpu-1.1.3.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsymphony-cpu-1.1.3.so \
+    vendor/lge/msm8996-common/proprietary/lib/libsymphonypower-1.1.3.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsymphonypower-1.1.3.so \
+    vendor/lge/msm8996-common/proprietary/lib/libwfdavenhancements.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libwfdavenhancements.so \
+    vendor/lge/msm8996-common/proprietary/lib/libwfdclient.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libwfdclient.so \
+    vendor/lge/msm8996-common/proprietary/lib/libwfdcodecv4l2.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libwfdcodecv4l2.so \
+    vendor/lge/msm8996-common/proprietary/lib/libwfdcommonutils.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libwfdcommonutils.so \
+    vendor/lge/msm8996-common/proprietary/lib/libwfdconfigutils.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libwfdconfigutils.so \
+    vendor/lge/msm8996-common/proprietary/lib/libwfdmminterface.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libwfdmminterface.so \
+    vendor/lge/msm8996-common/proprietary/lib/libwfdmmsink.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libwfdmmsink.so \
+    vendor/lge/msm8996-common/proprietary/lib/libwfdmmsrc.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libwfdmmsrc.so \
+    vendor/lge/msm8996-common/proprietary/lib/libwfdnative.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libwfdnative.so \
+    vendor/lge/msm8996-common/proprietary/lib/libwfdrtsp.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libwfdrtsp.so \
+    vendor/lge/msm8996-common/proprietary/lib/libwfdservice.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libwfdservice.so \
+    vendor/lge/msm8996-common/proprietary/lib/libwfdsm.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libwfdsm.so \
+    vendor/lge/msm8996-common/proprietary/lib/libwfduibcinterface.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libwfduibcinterface.so \
+    vendor/lge/msm8996-common/proprietary/lib/libwfduibcsink.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libwfduibcsink.so \
+    vendor/lge/msm8996-common/proprietary/lib/libwfduibcsinkinterface.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libwfduibcsinkinterface.so \
+    vendor/lge/msm8996-common/proprietary/lib/libwfduibcsrc.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libwfduibcsrc.so \
+    vendor/lge/msm8996-common/proprietary/lib/libwfduibcsrcinterface.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libwfduibcsrcinterface.so \
+    vendor/lge/msm8996-common/proprietary/lib/vendor.lge.hardware.bootproperty@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.lge.hardware.bootproperty@1.0.so \
+    vendor/lge/msm8996-common/proprietary/lib/vendor.lge.hardware.configstore@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.lge.hardware.configstore@1.0.so \
+    vendor/lge/msm8996-common/proprietary/lib/vendor.lge.hardware.platform@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.lge.hardware.platform@1.0.so \
+    vendor/lge/msm8996-common/proprietary/lib/vendor.lge.hardware.platform@1.1.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.lge.hardware.platform@1.1.so \
+    vendor/lge/msm8996-common/proprietary/lib/vendor.lge.hardware.property@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.lge.hardware.property@1.0.so \
+    vendor/lge/msm8996-common/proprietary/lib/vendor.lge.hardware.property@1.1.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.lge.hardware.property@1.1.so \
+    vendor/lge/msm8996-common/proprietary/lib/vendor.lge.hardware.property@1.2.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.lge.hardware.property@1.2.so \
+    vendor/lge/msm8996-common/proprietary/lib/vendor.lge.hardware.sensors@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.lge.hardware.sensors@1.0.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/vendor.lge.hardware.sysnode@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.lge.hardware.sysnode@1.0.so \
+    vendor/lge/msm8996-common/proprietary/lib/vendor.qti.gnss@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.qti.gnss@1.0.so \
+    vendor/lge/msm8996-common/proprietary/lib/vendor.qti.gnss@1.1.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.qti.gnss@1.1.so \
+    vendor/lge/msm8996-common/proprietary/lib/vendor.qti.gnss@1.2.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.qti.gnss@1.2.so \
+    vendor/lge/msm8996-common/proprietary/lib/vendor.qti.gnss@2.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.qti.gnss@2.0.so \
+    vendor/lge/msm8996-common/proprietary/lib/vendor.qti.gnss@2.1.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.qti.gnss@2.1.so \
+    vendor/lge/msm8996-common/proprietary/lib/vendor.qti.hardware.sensorscalibrate@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.qti.hardware.sensorscalibrate@1.0.so \
+    vendor/lge/msm8996-common/proprietary/lib/vendor.qti.voiceprint@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.qti.voiceprint@1.0.so \
+    vendor/lge/msm8996-common/proprietary/lib64/android.hardware.gnss@8.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/android.hardware.gnss@8.0.so \
+    vendor/lge/msm8996-common/proprietary/lib64/com.qualcomm.qti.imscmservice@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/com.qualcomm.qti.imscmservice@1.0.so \
+    vendor/lge/msm8996-common/proprietary/lib64/lib-imscamera.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/lib-imscamera.so \
+    vendor/lge/msm8996-common/proprietary/lib64/lib-imsvideocodec.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/lib-imsvideocodec.so \
+    vendor/lge/msm8996-common/proprietary/lib64/lib-imsvt.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/lib-imsvt.so \
+    vendor/lge/msm8996-common/proprietary/lib64/lib-imsvtextutils.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/lib-imsvtextutils.so \
+    vendor/lge/msm8996-common/proprietary/lib64/lib-imsvtutils.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/lib-imsvtutils.so \
+    vendor/lge/msm8996-common/proprietary/lib64/libOmxMux.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libOmxMux.so \
+    vendor/lge/msm8996-common/proprietary/lib64/libaudioroute.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libaudioroute.so \
+    vendor/lge/msm8996-common/proprietary/lib64/libdiag_system.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libdiag_system.so \
+    vendor/lge/msm8996-common/proprietary/lib64/libdovi.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libdovi.so \
+    vendor/lge/msm8996-common/proprietary/lib64/libimscamera_jni.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libimscamera_jni.so \
+    vendor/lge/msm8996-common/proprietary/lib64/libimsmedia_jni.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libimsmedia_jni.so \
+    vendor/lge/msm8996-common/proprietary/lib64/liblocationservice_jni.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/liblocationservice_jni.so \
+    vendor/lge/msm8996-common/proprietary/lib64/libmdsprpc_system.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libmdsprpc_system.so \
+    vendor/lge/msm8996-common/proprietary/lib64/libmmosal.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libmmosal.so \
+    vendor/lge/msm8996-common/proprietary/lib64/librcc.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/librcc.so \
+    vendor/lge/msm8996-common/proprietary/lib64/libsdsprpc_system.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libsdsprpc_system.so \
+    vendor/lge/msm8996-common/proprietary/lib64/libsymphony-1.1.3.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libsymphony-1.1.3.so \
+    vendor/lge/msm8996-common/proprietary/lib64/libsymphony-cpu-1.1.3.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libsymphony-cpu-1.1.3.so \
+    vendor/lge/msm8996-common/proprietary/lib64/libsymphonypower-1.1.3.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libsymphonypower-1.1.3.so \
+    vendor/lge/msm8996-common/proprietary/lib64/libwfdclient.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libwfdclient.so \
+    vendor/lge/msm8996-common/proprietary/lib64/libwfdnative.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libwfdnative.so \
+    vendor/lge/msm8996-common/proprietary/lib64/libxt_native.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libxt_native.so \
+    vendor/lge/msm8996-common/proprietary/lib64/vendor.lge.hardware.bootproperty@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.lge.hardware.bootproperty@1.0.so \
+    vendor/lge/msm8996-common/proprietary/lib64/vendor.lge.hardware.configstore@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.lge.hardware.configstore@1.0.so \
+    vendor/lge/msm8996-common/proprietary/lib64/vendor.lge.hardware.platform@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.lge.hardware.platform@1.0.so \
+    vendor/lge/msm8996-common/proprietary/lib64/vendor.lge.hardware.platform@1.1.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.lge.hardware.platform@1.1.so \
+    vendor/lge/msm8996-common/proprietary/lib64/vendor.lge.hardware.property@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.lge.hardware.property@1.0.so \
+    vendor/lge/msm8996-common/proprietary/lib64/vendor.lge.hardware.property@1.1.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.lge.hardware.property@1.1.so \
+    vendor/lge/msm8996-common/proprietary/lib64/vendor.lge.hardware.property@1.2.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.lge.hardware.property@1.2.so \
+    vendor/lge/msm8996-common/proprietary/lib64/vendor.lge.hardware.sensors@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.lge.hardware.sensors@1.0.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.lge.hardware.sysnode@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.lge.hardware.sysnode@1.0.so \
+    vendor/lge/msm8996-common/proprietary/lib64/vendor.qti.gnss@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.qti.gnss@1.0.so \
+    vendor/lge/msm8996-common/proprietary/lib64/vendor.qti.gnss@1.1.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.qti.gnss@1.1.so \
+    vendor/lge/msm8996-common/proprietary/lib64/vendor.qti.gnss@1.2.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.qti.gnss@1.2.so \
+    vendor/lge/msm8996-common/proprietary/lib64/vendor.qti.gnss@2.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.qti.gnss@2.0.so \
+    vendor/lge/msm8996-common/proprietary/lib64/vendor.qti.gnss@2.1.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.qti.gnss@2.1.so \
+    vendor/lge/msm8996-common/proprietary/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so \
+    vendor/lge/msm8996-common/proprietary/lib64/vendor.qti.imsrtpservice@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.qti.imsrtpservice@1.0.so \
+    vendor/lge/msm8996-common/proprietary/lib64/vendor.qti.voiceprint@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.qti.voiceprint@1.0.so \
+    vendor/lge/msm8996-common/proprietary/product/bin/dpmd:$(TARGET_COPY_OUT_PRODUCT)/bin/dpmd \
+    vendor/lge/msm8996-common/proprietary/product/etc/camera_config.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/camera_config.xml \
+    vendor/lge/msm8996-common/proprietary/product/etc/dpm/dpm.conf:$(TARGET_COPY_OUT_PRODUCT)/etc/dpm/dpm.conf \
+    vendor/lge/msm8996-common/proprietary/product/etc/init/dpmd.rc:$(TARGET_COPY_OUT_PRODUCT)/etc/init/dpmd.rc \
+    vendor/lge/msm8996-common/proprietary/product/etc/permissions/com.qti.dpmframework.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.qti.dpmframework.xml \
+    vendor/lge/msm8996-common/proprietary/product/etc/permissions/dpmapi.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/dpmapi.xml \
+    vendor/lge/msm8996-common/proprietary/product/framework/com.qti.dpmframework.jar:$(TARGET_COPY_OUT_PRODUCT)/framework/com.qti.dpmframework.jar \
+    vendor/lge/msm8996-common/proprietary/product/framework/dpmapi.jar:$(TARGET_COPY_OUT_PRODUCT)/framework/dpmapi.jar \
+    vendor/lge/msm8996-common/proprietary/product/framework/qti-telephony-common.jar:$(TARGET_COPY_OUT_PRODUCT)/framework/qti-telephony-common.jar \
+    vendor/lge/msm8996-common/proprietary/product/lib/vendor.display.color@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.display.color@1.0.so \
+    vendor/lge/msm8996-common/proprietary/product/lib/vendor.display.postproc@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.display.postproc@1.0.so \
+    vendor/lge/msm8996-common/proprietary/product/lib/vendor.qti.hardware.qdutils_disp@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.qdutils_disp@1.0.so \
+    vendor/lge/msm8996-common/proprietary/product/lib64/com.qualcomm.qti.dpm.api@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/com.qualcomm.qti.dpm.api@1.0.so \
+    vendor/lge/msm8996-common/proprietary/product/lib64/com.quicinc.cne.api@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/com.quicinc.cne.api@1.0.so \
+    vendor/lge/msm8996-common/proprietary/product/lib64/com.quicinc.cne.api@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/com.quicinc.cne.api@1.0.so \
+    vendor/lge/msm8996-common/proprietary/product/lib64/com.quicinc.cne.api@1.1.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/com.quicinc.cne.api@1.1.so \
+    vendor/lge/msm8996-common/proprietary/product/lib64/com.quicinc.cne.api@1.1.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/com.quicinc.cne.api@1.1.so \
+    vendor/lge/msm8996-common/proprietary/product/lib64/com.quicinc.cne.constants@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/com.quicinc.cne.constants@1.0.so \
+    vendor/lge/msm8996-common/proprietary/product/lib64/com.quicinc.cne.constants@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/com.quicinc.cne.constants@1.0.so \
+    vendor/lge/msm8996-common/proprietary/product/lib64/com.quicinc.cne.constants@2.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/com.quicinc.cne.constants@2.0.so \
+    vendor/lge/msm8996-common/proprietary/product/lib64/com.quicinc.cne.constants@2.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/com.quicinc.cne.constants@2.0.so \
+    vendor/lge/msm8996-common/proprietary/product/lib64/com.quicinc.cne.constants@2.1.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/com.quicinc.cne.constants@2.1.so \
+    vendor/lge/msm8996-common/proprietary/product/lib64/com.quicinc.cne.constants@2.1.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/com.quicinc.cne.constants@2.1.so \
+    vendor/lge/msm8996-common/proprietary/product/lib64/libaptXHD_encoder.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libaptXHD_encoder.so \
+    vendor/lge/msm8996-common/proprietary/product/lib64/libaptX_encoder.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libaptX_encoder.so \
+    vendor/lge/msm8996-common/proprietary/product/lib64/libdpmctmgr.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libdpmctmgr.so \
+    vendor/lge/msm8996-common/proprietary/product/lib64/libdpmfdmgr.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libdpmfdmgr.so \
+    vendor/lge/msm8996-common/proprietary/product/lib64/libdpmframework.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libdpmframework.so \
+    vendor/lge/msm8996-common/proprietary/product/lib64/libdpmtcm.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libdpmtcm.so \
+    vendor/lge/msm8996-common/proprietary/product/lib64/vendor.display.color@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.display.color@1.0.so \
+    vendor/lge/msm8996-common/proprietary/product/lib64/vendor.display.postproc@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.display.postproc@1.0.so \
+    vendor/lge/msm8996-common/proprietary/product/lib64/vendor.qti.hardware.qdutils_disp@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.qdutils_disp@1.0.so \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/ATFWD-daemon:$(TARGET_COPY_OUT_VENDOR)/bin/ATFWD-daemon \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/adpl:$(TARGET_COPY_OUT_VENDOR)/bin/adpl \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/adsprpcd:$(TARGET_COPY_OUT_VENDOR)/bin/adsprpcd \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/cnd:$(TARGET_COPY_OUT_VENDOR)/bin/cnd \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/cnd:$(TARGET_COPY_OUT_VENDOR)/bin/cnd \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/dpmQmiMgr:$(TARGET_COPY_OUT_VENDOR)/bin/dpmQmiMgr \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/energy-awareness:$(TARGET_COPY_OUT_VENDOR)/bin/energy-awareness \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/hvdcp_opti:$(TARGET_COPY_OUT_VENDOR)/bin/hvdcp_opti \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/hw/android.hardware.drm@1.1-service.widevine:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.drm@1.1-service.widevine \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/hw/vendor.display.color@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.display.color@1.0-service \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/hw/vendor.lge.hardware.bootproperty@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.lge.hardware.bootproperty@1.0-service \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/hw/vendor.lge.hardware.configstore@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.lge.hardware.configstore@1.0-service \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/hw/vendor.lge.hardware.platform@1.1-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.lge.hardware.platform@1.1-service \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/hw/vendor.lge.hardware.property@1.2-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.lge.hardware.property@1.2-service \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/hw/vendor.lge.hardware.sysnode@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.lge.hardware.sysnode@1.0-service \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/hw/vendor.qti.gnss@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.gnss@1.0-service \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/hw/vendor.qti.hardware.perf@2.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.perf@2.0-service \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/hw/vendor.qti.hardware.qdutils_disp@1.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.qdutils_disp@1.0-service-qti \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/ims_rtp_daemon:$(TARGET_COPY_OUT_VENDOR)/bin/ims_rtp_daemon \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/imsdatadaemon:$(TARGET_COPY_OUT_VENDOR)/bin/imsdatadaemon \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/imsqmidaemon:$(TARGET_COPY_OUT_VENDOR)/bin/imsqmidaemon \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/imsrcsd:$(TARGET_COPY_OUT_VENDOR)/bin/imsrcsd \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/irsc_util:$(TARGET_COPY_OUT_VENDOR)/bin/irsc_util \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/loc_launcher:$(TARGET_COPY_OUT_VENDOR)/bin/loc_launcher \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/lowi-server:$(TARGET_COPY_OUT_VENDOR)/bin/lowi-server \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/mm-pp-dpps:$(TARGET_COPY_OUT_VENDOR)/bin/mm-pp-dpps \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/mm-qcamera-app:$(TARGET_COPY_OUT_VENDOR)/bin/mm-qcamera-app \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/mm-qcamera-daemon:$(TARGET_COPY_OUT_VENDOR)/bin/mm-qcamera-daemon \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/msm_irqbalance:$(TARGET_COPY_OUT_VENDOR)/bin/msm_irqbalance \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/netmgrd:$(TARGET_COPY_OUT_VENDOR)/bin/netmgrd \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/pm-proxy:$(TARGET_COPY_OUT_VENDOR)/bin/pm-proxy \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/pm-service:$(TARGET_COPY_OUT_VENDOR)/bin/pm-service \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/port-bridge:$(TARGET_COPY_OUT_VENDOR)/bin/port-bridge \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/qseecomd:$(TARGET_COPY_OUT_VENDOR)/bin/qseecomd \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/qti:$(TARGET_COPY_OUT_VENDOR)/bin/qti \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/rmt_storage:$(TARGET_COPY_OUT_VENDOR)/bin/rmt_storage \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/sensors.qti:$(TARGET_COPY_OUT_VENDOR)/bin/sensors.qti \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/slim_daemon:$(TARGET_COPY_OUT_VENDOR)/bin/slim_daemon \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/tftp_server:$(TARGET_COPY_OUT_VENDOR)/bin/tftp_server \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/thermal-engine:$(TARGET_COPY_OUT_VENDOR)/bin/thermal-engine \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/time_daemon:$(TARGET_COPY_OUT_VENDOR)/bin/time_daemon \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/wifidisplayhalservice:$(TARGET_COPY_OUT_VENDOR)/bin/wifidisplayhalservice \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/xtra-daemon:$(TARGET_COPY_OUT_VENDOR)/bin/xtra-daemon \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/acdbdata/Bluetooth_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/Bluetooth_cal.acdb \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/acdbdata/General_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/General_cal.acdb \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/acdbdata/Global_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/Global_cal.acdb \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/acdbdata/Handset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/Handset_cal.acdb \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/acdbdata/Hdmi_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/Hdmi_cal.acdb \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/acdbdata/Headset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/Headset_cal.acdb \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/acdbdata/Speaker_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/Speaker_cal.acdb \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/cacert_location.pem:$(TARGET_COPY_OUT_VENDOR)/etc/cacert_location.pem \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/bu24235_dl_program_Lucy_LGITAct_ICG1020S_rev10_S_data1.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/bu24235_dl_program_Lucy_LGITAct_ICG1020S_rev10_S_data1.bin \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/bu24235_dl_program_Lucy_LGITAct_ICG1020S_rev10_S_data2.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/bu24235_dl_program_Lucy_LGITAct_ICG1020S_rev10_S_data2.bin \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/bu24235_dl_program_Lucy_LGITAct_ICG1020S_rev6_S_data1.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/bu24235_dl_program_Lucy_LGITAct_ICG1020S_rev6_S_data1.bin \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/bu24235_dl_program_Lucy_LGITAct_ICG1020S_rev6_S_data2.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/bu24235_dl_program_Lucy_LGITAct_ICG1020S_rev6_S_data2.bin \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/bu24235_dl_program_Lucy_LGITAct_ICG1020S_rev7_S_data1.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/bu24235_dl_program_Lucy_LGITAct_ICG1020S_rev7_S_data1.bin \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/bu24235_dl_program_Lucy_LGITAct_ICG1020S_rev7_S_data2.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/bu24235_dl_program_Lucy_LGITAct_ICG1020S_rev7_S_data2.bin \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/bu24235_dl_program_Lucy_LGITAct_ICG1020S_rev8_S_data1.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/bu24235_dl_program_Lucy_LGITAct_ICG1020S_rev8_S_data1.bin \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/bu24235_dl_program_Lucy_LGITAct_ICG1020S_rev8_S_data2.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/bu24235_dl_program_Lucy_LGITAct_ICG1020S_rev8_S_data2.bin \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/bu24235_dl_program_Lucy_LGITAct_OPAF_ICG1020S_rev1_S_data1_0x01.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/bu24235_dl_program_Lucy_LGITAct_OPAF_ICG1020S_rev1_S_data1_0x01.bin \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/bu24235_dl_program_Lucy_LGITAct_OPAF_ICG1020S_rev1_S_data2_0x01.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/bu24235_dl_program_Lucy_LGITAct_OPAF_ICG1020S_rev1_S_data2_0x01.bin \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/bu24235_dl_program_Lucy_MTMAct_ICG1020S_rev4_S_data1.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/bu24235_dl_program_Lucy_MTMAct_ICG1020S_rev4_S_data1.bin \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/bu24235_dl_program_Lucy_MTMAct_ICG1020S_rev4_S_data2.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/bu24235_dl_program_Lucy_MTMAct_ICG1020S_rev4_S_data2.bin \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/bu24235_dl_program_Lucy_MTMAct_ICG1020S_rev6_S_data1.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/bu24235_dl_program_Lucy_MTMAct_ICG1020S_rev6_S_data1.bin \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/bu24235_dl_program_Lucy_MTMAct_ICG1020S_rev6_S_data2.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/bu24235_dl_program_Lucy_MTMAct_ICG1020S_rev6_S_data2.bin \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/bu24235_dl_program_Lucy_MTMAct_ICG1020S_rev7_S_data1.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/bu24235_dl_program_Lucy_MTMAct_ICG1020S_rev7_S_data1.bin \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/bu24235_dl_program_Lucy_MTMAct_ICG1020S_rev7_S_data2.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/bu24235_dl_program_Lucy_MTMAct_ICG1020S_rev7_S_data2.bin \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/bu24235_dl_program_Lucy_MTMAct_ICG1020S_rev8_S_data1.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/bu24235_dl_program_Lucy_MTMAct_ICG1020S_rev8_S_data1.bin \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/bu24235_dl_program_Lucy_MTMAct_ICG1020S_rev8_S_data2.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/bu24235_dl_program_Lucy_MTMAct_ICG1020S_rev8_S_data2.bin \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camera_config.xml \
     vendor/lge/msm8996-common/proprietary/vendor/etc/camera/film/0_film.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/film/0_film.dat \
     vendor/lge/msm8996-common/proprietary/vendor/etc/camera/film/10_film.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/film/10_film.dat \
     vendor/lge/msm8996-common/proprietary/vendor/etc/camera/film/1_film.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/film/1_film.dat \
@@ -30,327 +261,61 @@ PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/etc/camera/film/7_film.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/film/7_film.dat \
     vendor/lge/msm8996-common/proprietary/vendor/etc/camera/film/8_film.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/film/8_film.dat \
     vendor/lge/msm8996-common/proprietary/vendor/etc/camera/film/9_film.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/film/9_film.dat \
-    vendor/lge/msm8996-common/proprietary/vendor/firmware/cpp_firmware_v1_10_0.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/cpp_firmware_v1_10_0.fw \
-    vendor/lge/msm8996-common/proprietary/vendor/firmware/cpp_firmware_v1_12_0.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/cpp_firmware_v1_12_0.fw \
-    vendor/lge/msm8996-common/proprietary/vendor/firmware/cpp_firmware_v1_1_1.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/cpp_firmware_v1_1_1.fw \
-    vendor/lge/msm8996-common/proprietary/vendor/firmware/cpp_firmware_v1_1_6.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/cpp_firmware_v1_1_6.fw \
-    vendor/lge/msm8996-common/proprietary/vendor/firmware/cpp_firmware_v1_2_0.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/cpp_firmware_v1_2_0.fw \
-    vendor/lge/msm8996-common/proprietary/vendor/firmware/cpp_firmware_v1_4_0.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/cpp_firmware_v1_4_0.fw \
-    vendor/lge/msm8996-common/proprietary/vendor/firmware/cpp_firmware_v1_5_0.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/cpp_firmware_v1_5_0.fw \
-    vendor/lge/msm8996-common/proprietary/vendor/firmware/cpp_firmware_v1_5_1.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/cpp_firmware_v1_5_1.fw \
-    vendor/lge/msm8996-common/proprietary/vendor/firmware/cpp_firmware_v1_5_2.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/cpp_firmware_v1_5_2.fw \
-    vendor/lge/msm8996-common/proprietary/vendor/firmware/cpp_firmware_v1_6_0.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/cpp_firmware_v1_6_0.fw \
-    vendor/lge/msm8996-common/proprietary/vendor/firmware/cpp_firmware_v1_8_0.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/cpp_firmware_v1_8_0.fw \
-    vendor/lge/msm8996-common/proprietary/vendor/firmware/leia_pfp_470.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/leia_pfp_470.fw \
-    vendor/lge/msm8996-common/proprietary/vendor/firmware/leia_pm4_470.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/leia_pm4_470.fw \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromaflash.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromaflash.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libhwdaphal.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhwdaphal.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libmmcamera_chromaflash_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_chromaflash_lib.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libmmcamera_quadracfa.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_quadracfa.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libmmcamera_trueportrait_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_trueportrait_lib.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libsensor_lge_cal.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsensor_lge_cal.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libsensor_lge_cal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsensor_lge_cal.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libremosaic_daemon.so:$(TARGET_COPY_OUT_VENDOR)/lib/libremosaic_daemon.so \
-    vendor/lge/msm8996-common/proprietary/etc/permissions/com.qti.location.sdk.xml:system/etc/permissions/com.qti.location.sdk.xml \
-    vendor/lge/msm8996-common/proprietary/etc/permissions/com.qualcomm.location.xml:system/etc/permissions/com.qualcomm.location.xml \
-    vendor/lge/msm8996-common/proprietary/framework/izat.xt.srv.jar:system/framework/izat.xt.srv.jar \
-    vendor/lge/msm8996-common/proprietary/etc/permissions/izat.xt.srv.xml:system/etc/permissions/izat.xt.srv.xml \
-    vendor/lge/msm8996-common/proprietary/framework/com.qti.location.sdk.jar:system/framework/com.qti.location.sdk.jar \
-    vendor/lge/msm8996-common/proprietary/etc/permissions/privapp-permissions-com.qualcomm.location.xml:system/etc/permissions/privapp-permissions-com.qualcomm.location.xml \
-    vendor/lge/msm8996-common/proprietary/lib64/liblocationservice_jni.so:system/lib64/liblocationservice_jni.so \
-    vendor/lge/msm8996-common/proprietary/lib/vendor.qti.gnss@1.0.so:system/lib/vendor.qti.gnss@1.0.so \
-    vendor/lge/msm8996-common/proprietary/lib/vendor.qti.gnss@1.1.so:system/lib/vendor.qti.gnss@1.1.so \
-    vendor/lge/msm8996-common/proprietary/lib/vendor.qti.gnss@1.2.so:system/lib/vendor.qti.gnss@1.2.so \
-    vendor/lge/msm8996-common/proprietary/lib/vendor.qti.gnss@2.0.so:system/lib/vendor.qti.gnss@2.0.so \
-    vendor/lge/msm8996-common/proprietary/lib/vendor.qti.gnss@2.1.so:system/lib/vendor.qti.gnss@2.1.so \
-    vendor/lge/msm8996-common/proprietary/lib64/libxt_native.so:system/lib64/libxt_native.so \
-    vendor/lge/msm8996-common/proprietary/lib64/vendor.qti.gnss@1.0.so:system/lib64/vendor.qti.gnss@1.0.so \
-    vendor/lge/msm8996-common/proprietary/lib64/vendor.qti.gnss@1.1.so:system/lib64/vendor.qti.gnss@1.1.so \
-    vendor/lge/msm8996-common/proprietary/lib64/vendor.qti.gnss@1.2.so:system/lib64/vendor.qti.gnss@1.2.so \
-    vendor/lge/msm8996-common/proprietary/lib64/vendor.qti.gnss@2.0.so:system/lib64/vendor.qti.gnss@2.0.so \
-    vendor/lge/msm8996-common/proprietary/lib64/vendor.qti.gnss@2.1.so:system/lib64/vendor.qti.gnss@2.1.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.gnss@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.gnss@1.0.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.gnss@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.gnss@1.1.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.gnss@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.gnss@1.2.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.gnss@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.gnss@2.0.so \
-    vendor/lge/msm8996-common/proprietary/vendor/bin/hvdcp_opti:$(TARGET_COPY_OUT_VENDOR)/bin/hvdcp_opti \
-    vendor/lge/msm8996-common/proprietary/vendor/bin/hw/vendor.lge.hardware.sysnode@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.lge.hardware.sysnode@1.0-service \
-    vendor/lge/msm8996-common/proprietary/vendor/bin/hw/vendor.qti.gnss@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.gnss@1.0-service \
-    vendor/lge/msm8996-common/proprietary/vendor/bin/loc_launcher:$(TARGET_COPY_OUT_VENDOR)/bin/loc_launcher \
-    vendor/lge/msm8996-common/proprietary/vendor/bin/lowi-server:$(TARGET_COPY_OUT_VENDOR)/bin/lowi-server \
-    vendor/lge/msm8996-common/proprietary/vendor/bin/slim_daemon:$(TARGET_COPY_OUT_VENDOR)/bin/slim_daemon \
-    vendor/lge/msm8996-common/proprietary/vendor/bin/qseecomd:$(TARGET_COPY_OUT_VENDOR)/bin/qseecomd \
-    vendor/lge/msm8996-common/proprietary/vendor/bin/time_daemon:$(TARGET_COPY_OUT_VENDOR)/bin/time_daemon \
-    vendor/lge/msm8996-common/proprietary/vendor/bin/xtra-daemon:$(TARGET_COPY_OUT_VENDOR)/bin/xtra-daemon \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/cacert_location.pem:$(TARGET_COPY_OUT_VENDOR)/etc/cacert_location.pem \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/xtra_root_cert.pem:$(TARGET_COPY_OUT_VENDOR)/etc/xtra_root_cert.pem \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/init/vendor.lge.hardware.sysnode-1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.lge.hardware.sysnode-1.0-service.rc \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/init/vendor.qti.gnss@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.gnss@1.0-service.rc \
-    vendor/lge/msm8996-common/proprietary/vendor/framework/vendor.lge.hardware.sysnode-V1.0-java.jar:$(TARGET_COPY_OUT_VENDOR)/framework/vendor.lge.hardware.sysnode-V1.0-java.jar \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/vendor.lge.hardware.sysnode@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.lge.hardware.sysnode@1.0.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/hw/vendor.lge.hardware.sysnode@1.0-client.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.lge.hardware.sysnode@1.0-client.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/hw/vendor.lge.hardware.sysnode@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.lge.hardware.sysnode@1.0-impl.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/vendor.qti.hardware.tui_comm@1.0_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.tui_comm@1.0_vendor.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libmm-qcamera.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmm-qcamera.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libQSEEComAPI.so:$(TARGET_COPY_OUT_VENDOR)/lib/libQSEEComAPI.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libStDrvInt.so:$(TARGET_COPY_OUT_VENDOR)/lib/libStDrvInt.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libcppf.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcppf.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libmm-hdcpmgr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmm-hdcpmgr.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libmmi.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmi.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libmmi_jni.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmi_jni.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libmmosal_proprietary.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmosal_proprietary.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/liboemcrypto.so:$(TARGET_COPY_OUT_VENDOR)/lib/liboemcrypto.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libqisl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqisl.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/librpmb.so:$(TARGET_COPY_OUT_VENDOR)/lib/librpmb.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libssd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libssd.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libvideoutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvideoutils.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libSJFingerDetect.so:$(TARGET_COPY_OUT_VENDOR)/lib/libSJFingerDetect.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/rfsa/adsp/fluence_voiceplus_module.so.1:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/fluence_voiceplus_module.so.1 \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/rfsa/adsp/mmecns_module.so.1:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/mmecns_module.so.1 \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.lge.hardware.sysnode@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.lge.hardware.sysnode@1.0.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/hw/vendor.lge.hardware.sysnode@1.0-client.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.lge.hardware.sysnode@1.0-client.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/hw/vendor.lge.hardware.sysnode@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.lge.hardware.sysnode@1.0-impl.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.tui_comm@1.0_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.tui_comm@1.0_vendor.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/hw/sensors.vr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/sensors.vr.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/hw/vendor.qti.gnss@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.gnss@1.0-impl.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libDRPlugin.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libDRPlugin.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libGPreqcancel.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libGPreqcancel.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libGPreqcancel_svc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libGPreqcancel_svc.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libQSEEComAPI.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libQSEEComAPI.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libSecureUILib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libSecureUILib.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libStDrvInt.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libStDrvInt.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libalarmservice_jni.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libalarmservice_jni.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libdataitems.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdataitems.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libdrmfs.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdrmfs.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libdrmtime.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdrmtime.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libdrplugin_client.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdrplugin_client.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libevent_observer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libevent_observer.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libflp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libflp.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libgdtap.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgdtap.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libgeofence.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgeofence.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libizat_client_api.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libizat_client_api.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libloc_api_v02.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libloc_api_v02.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libizat_core.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libizat_core.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/liblbs_core.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblbs_core.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libloc_ds_api.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libloc_ds_api.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/liblocationservice.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblocationservice.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/liblocationservice_glue.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblocationservice_glue.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/liblowi_client.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblowi_client.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/liblowi_wifihal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblowi_wifihal.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libmm-hdcpmgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmm-hdcpmgr.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libmmi.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmi.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libmmi_jni.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmi_jni.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libmmosal_proprietary.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmosal_proprietary.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libqisl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqisl.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libslimclient.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libslimclient.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/librpmb.so:$(TARGET_COPY_OUT_VENDOR)/lib64/librpmb.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libsecureui.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsecureui.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libsecureui_svcsock.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsecureui_svcsock.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libspl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libspl.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libssd.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libssd.so \
-    vendor/lge/msm8996-common/proprietary/lib/libsdsprpc_system.so:system/lib/libsdsprpc_system.so \
-    vendor/lge/msm8996-common/proprietary/lib64/libsdsprpc_system.so:system/lib64/libsdsprpc_system.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libsdsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsdsprpc.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libsdsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsdsprpc.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libvideoutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvideoutils.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libulp2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libulp2.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libxtadapter.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libxtadapter.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libxtwifi_ulp_adaptor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libxtwifi_ulp_adaptor.so
-
-# Privapp-permissions needed for aex
-PRODUCT_COPY_FILES += \
-    vendor/lge/msm8996-common/proprietary/etc/permissions/privapp-permissions-com.google.android.hiddenmenu.xml:system/etc/permissions/privapp-permissions-com.google.android.hiddenmenu.xml \
-    vendor/lge/msm8996-common/proprietary/etc/permissions/privapp-permissions-org.lineageos.settings.device.xml:system/etc/permissions/privapp-permissions-org.lineageos.settings.device.xml
-
-# Audio - from Stock H870 V30B
-PRODUCT_COPY_FILES += \
-    vendor/lge/msm8996-common/proprietary/lib/libaudioroute.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libaudioroute.so \
-    vendor/lge/msm8996-common/proprietary/lib64/libaudioroute.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libaudioroute.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libcdsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcdsprpc.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libacdb-fts.so:$(TARGET_COPY_OUT_VENDOR)/lib/libacdb-fts.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libacdbrtac.so:$(TARGET_COPY_OUT_VENDOR)/lib/libacdbrtac.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libadiertac.so:$(TARGET_COPY_OUT_VENDOR)/lib/libadiertac.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libadm.so:$(TARGET_COPY_OUT_VENDOR)/lib/libadm.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libaudcal.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaudcal.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libaudioalsa.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaudioalsa.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libcsd-client.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcsd-client.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libqtigef.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqtigef.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libtinycompress_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtinycompress_vendor.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libcdsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcdsprpc.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libacdb-fts.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libacdb-fts.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libacdbrtac.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libacdbrtac.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libadiertac.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libadiertac.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libaudcal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaudcal.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libaudioalsa.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaudioalsa.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libcsd-client.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcsd-client.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libqtigef.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqtigef.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libtinycompress_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtinycompress_vendor.so \
-
-# AudioFX Modules - from Stock H870 V30B
-PRODUCT_COPY_FILES += \
-    vendor/lge/msm8996-common/proprietary/etc/permissions/audiosphere.xml:system/etc/permissions/audiosphere.xml \
-    vendor/lge/msm8996-common/proprietary/framework/audiosphere.jar:system/framework/audiosphere.jar \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/soundfx/libasphere.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libasphere.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/soundfx/libaudiopreprocessing.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libaudiopreprocessing.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/soundfx/libbundlewrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libbundlewrapper.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/soundfx/libdownmix.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libdownmix.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/soundfx/libdynproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libdynproc.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/soundfx/libeagle.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libeagle.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/soundfx/libeffectproxy.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libeffectproxy.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/soundfx/libldnhncr.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libldnhncr.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/soundfx/liblgeffectwrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/liblgeffectwrapper.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/soundfx/libqcbassboost.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libqcbassboost.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/soundfx/libqcompostprocbundle.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libqcompostprocbundle.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/soundfx/libqcomvisualizer.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libqcomvisualizer.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/soundfx/libqcomvoiceprocessing.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libqcomvoiceprocessing.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/soundfx/libqcreverb.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libqcreverb.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/soundfx/libqcvirt.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libqcvirt.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/soundfx/libreverbwrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libreverbwrapper.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/soundfx/libvisualizer.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libvisualizer.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/soundfx/libvolumelistener.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libvolumelistener.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/soundfx/libasphere.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libasphere.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/soundfx/libaudiopreprocessing.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libaudiopreprocessing.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/soundfx/libbundlewrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libbundlewrapper.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/soundfx/libdownmix.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libdownmix.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/soundfx/libdynproc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libdynproc.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/soundfx/libeagle.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libeagle.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/soundfx/libeffectproxy.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libeffectproxy.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/soundfx/libldnhncr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libldnhncr.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/soundfx/liblgeffectwrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/liblgeffectwrapper.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/soundfx/libqcbassboost.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libqcbassboost.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/soundfx/libqcompostprocbundle.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libqcompostprocbundle.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/soundfx/libqcomvisualizer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libqcomvisualizer.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/soundfx/libqcomvoiceprocessing.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libqcomvoiceprocessing.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/soundfx/libqcvirt.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libqcvirt.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/soundfx/libreverbwrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libreverbwrapper.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/soundfx/libvisualizer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libvisualizer.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/soundfx/libvolumelistener.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libvolumelistener.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libeaglecore.so:$(TARGET_COPY_OUT_VENDOR)/lib/libeaglecore.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libeaglecore.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libeaglecore.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libdts-eagle-shared.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdts-eagle-shared.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libdts-eagle-shared.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdts-eagle-shared.so \
-
-# Audio (acdbloader) - from Stock H870 V30A
-PRODUCT_COPY_FILES += \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libacdbloader.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libacdbloader.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libacdbloader.so:$(TARGET_COPY_OUT_VENDOR)/lib/libacdbloader.so \
-
-# ADSP - from Stock H870 V30B
-PRODUCT_COPY_FILES += \
-    vendor/lge/msm8996-common/proprietary/vendor/bin/adsprpcd:$(TARGET_COPY_OUT_VENDOR)/bin/adsprpcd \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libadsp_default_listener.so:$(TARGET_COPY_OUT_VENDOR)/lib/libadsp_default_listener.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libadsp_hvx_callback_skel.so:$(TARGET_COPY_OUT_VENDOR)/lib/libadsp_hvx_callback_skel.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libadsp_hvx_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib/libadsp_hvx_stub.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libadsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libadsprpc.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libfastcvadsp_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib/libfastcvadsp_stub.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libmdsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmdsprpc.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libmmcamera_imglib_faceproc_adspstub.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_imglib_faceproc_adspstub.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libadsp_default_listener.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libadsp_default_listener.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libadsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libadsprpc.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libfastcvadsp_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfastcvadsp_stub.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libmdsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmdsprpc.so \
-    vendor/lge/msm8996-common/proprietary/lib/libmdsprpc_system.so:system/lib/libmdsprpc_system.so \
-    vendor/lge/msm8996-common/proprietary/lib64/libmdsprpc_system.so:system/lib64/libmdsprpc_system.so \
-
-# Bluetooth - aptX - from crosshatch QP1A.190711.020
-PRODUCT_COPY_FILES += \
-    vendor/lge/msm8996-common/proprietary/product/lib64/libaptXHD_encoder.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libaptXHD_encoder.so \
-    vendor/lge/msm8996-common/proprietary/product/lib64/libaptX_encoder.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libaptX_encoder.so \
-
-
-# DSP - from Stock H870 V30B
-PRODUCT_COPY_FILES += \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/rfsa/adsp/AlacDecoderModule.so.1:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/AlacDecoderModule.so.1 \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/rfsa/adsp/ApeDecoderModule.so.1:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/ApeDecoderModule.so.1 \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/rfsa/adsp/AudioSphereModule.so.1:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/AudioSphereModule.so.1 \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/rfsa/adsp/DTS_HPX_MODULE.so.1:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/DTS_HPX_MODULE.so.1 \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/rfsa/adsp/DolbyMobileModule.so.1:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/DolbyMobileModule.so.1 \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/rfsa/adsp/DolbySurroundModule.so.1:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/DolbySurroundModule.so.1 \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/rfsa/adsp/EtsiEaacPlusEncAndCmnModule.so.1:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/EtsiEaacPlusEncAndCmnModule.so.1 \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/rfsa/adsp/HeaacDecoderModule.so.1:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/HeaacDecoderModule.so.1 \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/rfsa/adsp/SAPlusCmnModule.so.1:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/SAPlusCmnModule.so.1o \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/rfsa/adsp/SrsTruMediaModule.so.1:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/SrsTruMediaModule.so.1 \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/rfsa/adsp/VorbisDecoderModule.so.1:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/VorbisDecoderModule.so.1 \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/rfsa/adsp/WmaProDecoderModule.so.1:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/WmaProDecoderModule.so.1 \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/rfsa/adsp/WmaStdDecoderModule.so.1:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/WmaStdDecoderModule.so.1 \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/rfsa/adsp/fastrpc_shell_0:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/fastrpc_shell_0 \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/rfsa/adsp/libscveObjectSegmentation_skel.so:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/libscveObjectSegmentation_skel.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/rfsa/adsp/libsysmon_skel.so:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/libsysmon_skel.so \
-	vendor/lge/msm8996-common/proprietary/vendor/lib/libsymphony-1.1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsymphony-1.1.1.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libsymphony-1.1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsymphony-1.1.2.so \
-    vendor/lge/msm8996-common/proprietary/lib/libsymphony-1.1.3.so:system/lib/libsymphony-1.1.3.so \
-    vendor/lge/msm8996-common/proprietary/lib64/libsymphony-1.1.3.so:system/lib64/libsymphony-1.1.3.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libsymphony-1.1.4.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsymphony-1.1.4.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libsymphony-1.1.4.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsymphony-1.1.4.so \
-    vendor/lge/msm8996-common/proprietary/lib/libsymphony-cpu-1.1.3.so:system/lib/libsymphony-cpu-1.1.3.so \
-    vendor/lge/msm8996-common/proprietary/lib64/libsymphony-cpu-1.1.3.so:system/lib64/libsymphony-cpu-1.1.3.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libsymphonypower-1.1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsymphonypower-1.1.1.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libsymphonypower-1.1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsymphonypower-1.1.2.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libsymphonypower-1.1.4.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsymphonypower-1.1.4.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libsymphonypower-1.1.4.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsymphonypower-1.1.4.so \
-    vendor/lge/msm8996-common/proprietary/lib64/libsymphonypower-1.1.3.so:system/lib64/libsymphonypower-1.1.3.so \
-    vendor/lge/msm8996-common/proprietary/lib/libsymphonypower-1.1.3.so:system/lib/libsymphonypower-1.1.3.so \
-
-# Peripheral manager - from daisy - daisy_sprout:10/QKQ1.191002.002/V11.0.2.0.QDLMIXM
-PRODUCT_COPY_FILES += \
-    vendor/lge/msm8996-common/proprietary/vendor/bin/pm-proxy:$(TARGET_COPY_OUT_VENDOR)/bin/pm-proxy \
-    vendor/lge/msm8996-common/proprietary/vendor/bin/pm-service:$(TARGET_COPY_OUT_VENDOR)/bin/pm-service \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libperipheral_client.so:$(TARGET_COPY_OUT_VENDOR)/lib/libperipheral_client.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libperipheral_client.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libperipheral_client.so \
-
-# Wifi-Display
-PRODUCT_COPY_FILES += \
-    vendor/lge/msm8996-common/proprietary/bin/wfdservice:system/bin/wfdservice \
-    vendor/lge/msm8996-common/proprietary/etc/init/wfdservice.rc:system/etc/init/wfdservice.rc \
-    vendor/lge/msm8996-common/proprietary/etc/wfdconfig.xml:system/etc/wfdconfig.xml \
-    vendor/lge/msm8996-common/proprietary/etc/wfdconfigsink.xml:system/etc/wfdconfigsink.xml \
-    vendor/lge/msm8996-common/proprietary/lib/com.qualcomm.qti.wifidisplayhal@1.0.so:system/lib/com.qualcomm.qti.wifidisplayhal@1.0.so \
-    vendor/lge/msm8996-common/proprietary/lib/extractors/libmmparser.so:system/lib/extractors/libmmparser.so \
-    vendor/lge/msm8996-common/proprietary/lib/libFileMux.so:system/lib/libFileMux.so \
-    vendor/lge/msm8996-common/proprietary/lib/libOmxMux.so:system/lib/libOmxMux.so \
-    vendor/lge/msm8996-common/proprietary/lib64/libOmxMux.so:system/lib64/libOmxMux.so \
-    vendor/lge/msm8996-common/proprietary/lib/libmmparser_lite.so:system/lib/libmmparser_lite.so \
-    vendor/lge/msm8996-common/proprietary/lib/libmmrtpdecoder.so:system/lib/libmmrtpdecoder.so \
-    vendor/lge/msm8996-common/proprietary/lib/libmmrtpencoder.so:system/lib/libmmrtpencoder.so \
-    vendor/lge/msm8996-common/proprietary/lib/libwfdavenhancements.so:system/lib/libwfdavenhancements.so \
-    vendor/lge/msm8996-common/proprietary/lib/libwfdclient.so:system/lib/libwfdclient.so \
-    vendor/lge/msm8996-common/proprietary/lib/libwfdcodecv4l2.so:system/lib/libwfdcodecv4l2.so \
-    vendor/lge/msm8996-common/proprietary/lib/libwfdcommonutils.so:system/lib/libwfdcommonutils.so \
-    vendor/lge/msm8996-common/proprietary/lib/libwfdconfigutils.so:system/lib/libwfdconfigutils.so \
-    vendor/lge/msm8996-common/proprietary/lib/libwfdmminterface.so:system/lib/libwfdmminterface.so \
-    vendor/lge/msm8996-common/proprietary/lib/libwfdmmsink.so:system/lib/libwfdmmsink.so \
-    vendor/lge/msm8996-common/proprietary/lib/libwfdmmsrc.so:system/lib/libwfdmmsrc.so \
-    vendor/lge/msm8996-common/proprietary/lib/libwfdnative.so:system/lib/libwfdnative.so \
-    vendor/lge/msm8996-common/proprietary/lib/libwfdrtsp.so:system/lib/libwfdrtsp.so \
-    vendor/lge/msm8996-common/proprietary/lib/libwfdservice.so:system/lib/libwfdservice.so \
-    vendor/lge/msm8996-common/proprietary/lib/libwfdsm.so:system/lib/libwfdsm.so \
-    vendor/lge/msm8996-common/proprietary/lib/libwfduibcinterface.so:system/lib/libwfduibcinterface.so \
-    vendor/lge/msm8996-common/proprietary/lib/libwfduibcsink.so:system/lib/libwfduibcsink.so \
-    vendor/lge/msm8996-common/proprietary/lib/libwfduibcsinkinterface.so:system/lib/libwfduibcsinkinterface.so \
-    vendor/lge/msm8996-common/proprietary/lib/libwfduibcsrc.so:system/lib/libwfduibcsrc.so \
-    vendor/lge/msm8996-common/proprietary/lib/libwfduibcsrcinterface.so:system/lib/libwfduibcsrcinterface.so \
-    vendor/lge/msm8996-common/proprietary/lib64/libwfdclient.so:system/lib64/libwfdclient.so \
-    vendor/lge/msm8996-common/proprietary/lib64/libwfdnative.so:system/lib64/libwfdnative.so \
-    vendor/lge/msm8996-common/proprietary/vendor/bin/wifidisplayhalservice:$(TARGET_COPY_OUT_VENDOR)/bin/wifidisplayhalservice \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0-halimpl.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.qualcomm.qti.wifidisplayhal@1.0-halimpl.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.qualcomm.qti.wifidisplayhal@1.0.so \
-    vendor/lge/msm8996-common/proprietary/lib/libmmosal.so:system//lib/libmmosal.so \
-    vendor/lge/msm8996-common/proprietary/lib64/libmmosal.so:system/lib64/libmmosal.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libwfdcommonutils_proprietary.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfdcommonutils_proprietary.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libwfdhaldsmanager.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfdhaldsmanager.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libwfdhdcpcp.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfdhdcpcp.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libwfdmmservice.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfdmmservice.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libwfdmodulehdcpsession.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfdmodulehdcpsession.so \
-
-# CNE - from daisy - daisy_sprout:10/QKQ1.191002.002/V11.0.2.0.QDLMIXM
-PRODUCT_COPY_FILES += \
-    vendor/lge/msm8996-common/proprietary/etc/cne/Nexus/ATT/ATT_profiles.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/cne/Nexus/ATT/ATT_profiles.xml \
-    vendor/lge/msm8996-common/proprietary/etc/cne/Nexus/ROW/ROW_profiles.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/cne/Nexus/ROW/ROW_profiles.xml \
-    vendor/lge/msm8996-common/proprietary/etc/cne/Nexus/VZW/VZW_profiles.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/cne/Nexus/VZW/VZW_profiles.xml \
-    vendor/lge/msm8996-common/proprietary/product/lib64/com.quicinc.cne.api@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/com.quicinc.cne.api@1.0.so \
-    vendor/lge/msm8996-common/proprietary/product/lib64/com.quicinc.cne.api@1.1.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/com.quicinc.cne.api@1.1.so \
-    vendor/lge/msm8996-common/proprietary/vendor/bin/cnd:$(TARGET_COPY_OUT_VENDOR)/bin/cnd \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/finger_detection/skintone_db.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/finger_detection/skintone_db.bin \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/food/1_food.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/food/1_food.dat \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/hi553_cowell_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/hi553_cowell_chromatix.xml \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/hi553_lgit_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/hi553_lgit_chromatix.xml \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/imx258_imtech_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/imx258_imtech_chromatix.xml \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/imx258_lgit_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/imx258_lgit_chromatix.xml \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/imx258_mono_imtech_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/imx258_mono_imtech_chromatix.xml \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/imx258_mono_lgit_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/imx258_mono_lgit_chromatix.xml \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/s5k3m3_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k3m3_chromatix.xml \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/selfie/1_selfie.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/selfie/1_selfie.dat \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/selfie/2_selfie.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/selfie/2_selfie.dat \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/selfie/3_selfie.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/selfie/3_selfie.dat \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/selfie/4_selfie.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/selfie/4_selfie.dat \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/selfie/5_selfie.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/selfie/5_selfie.dat \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/selfie/6_selfie.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/selfie/6_selfie.dat \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/selfie/7_selfie.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/selfie/7_selfie.dat \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/selfie/8_selfie.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/selfie/8_selfie.dat \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/selfie/9_selfie.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/selfie/9_selfie.dat \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/0_smartcam.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/0_smartcam.dat \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/10_smartcam_food.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/10_smartcam_food.dat \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/11_smartcam_food.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/11_smartcam_food.dat \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/12_smartcam_food.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/12_smartcam_food.dat \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/13_smartcam_person_rear.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/13_smartcam_person_rear.dat \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/14_smartcam_person_rear.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/14_smartcam_person_rear.dat \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/15_smartcam_person_rear.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/15_smartcam_person_rear.dat \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/16_smartcam_person_rear.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/16_smartcam_person_rear.dat \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/17_smartcam_landscape.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/17_smartcam_landscape.dat \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/18_smartcam_landscape.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/18_smartcam_landscape.dat \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/19_smartcam_landscape.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/19_smartcam_landscape.dat \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/1_smartcam_pet.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/1_smartcam_pet.dat \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/20_smartcam_landscape.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/20_smartcam_landscape.dat \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/21_smartcam_sunset_sunrise.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/21_smartcam_sunset_sunrise.dat \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/22_smartcam_sunset_sunrise.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/22_smartcam_sunset_sunrise.dat \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/23_smartcam_sunset_sunrise.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/23_smartcam_sunset_sunrise.dat \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/24_smartcam_sunset_sunrise.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/24_smartcam_sunset_sunrise.dat \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/25_smartcam_flower.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/25_smartcam_flower.dat \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/26_smartcam_flower.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/26_smartcam_flower.dat \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/27_smartcam_flower.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/27_smartcam_flower.dat \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/28_smartcam_flower.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/28_smartcam_flower.dat \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/2_smartcam_pet.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/2_smartcam_pet.dat \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/3_smartcam_pet.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/3_smartcam_pet.dat \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/4_smartcam_pet.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/4_smartcam_pet.dat \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/5_smartcam_city.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/5_smartcam_city.dat \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/65_smartcam_person_front.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/65_smartcam_person_front.dat \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/66_smartcam_person_front.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/66_smartcam_person_front.dat \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/67_smartcam_person_front.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/67_smartcam_person_front.dat \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/68_smartcam_person_front.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/68_smartcam_person_front.dat \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/6_smartcam_city.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/6_smartcam_city.dat \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/7_smartcam_city.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/7_smartcam_city.dat \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/8_smartcam_city.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/8_smartcam_city.dat \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/91_smartcam_basic_01.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/91_smartcam_basic_01.dat \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/92_smartcam_basic_02.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/92_smartcam_basic_02.dat \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/93_smartcam_basic_03.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/93_smartcam_basic_03.dat \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/94_smartcam_basic_04.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/94_smartcam_basic_04.dat \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/9_smartcam_food.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/9_smartcam_food.dat \
     vendor/lge/msm8996-common/proprietary/vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/ATT/ATT_profile1.xml \
     vendor/lge/msm8996-common/proprietary/vendor/etc/cne/wqeclient/ATT/ATT_profile2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/ATT/ATT_profile2.xml \
     vendor/lge/msm8996-common/proprietary/vendor/etc/cne/wqeclient/ATT/ATT_profile3.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/ATT/ATT_profile3.xml \
@@ -378,97 +343,27 @@ PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/etc/cne/wqeclient/VZW/VZW_profile4.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/VZW/VZW_profile4.xml \
     vendor/lge/msm8996-common/proprietary/vendor/etc/cne/wqeclient/VZW/VZW_profile5.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/VZW/VZW_profile5.xml \
     vendor/lge/msm8996-common/proprietary/vendor/etc/cne/wqeclient/VZW/VZW_profile6.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/VZW/VZW_profile6.xml \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/data/dsi_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/data/dsi_config.xml \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/data/netmgr_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/data/netmgr_config.xml \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/dolby_vision.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/dolby_vision.cfg \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.1-service.widevine.rc \
     vendor/lge/msm8996-common/proprietary/vendor/etc/init/cnd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/cnd.rc \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libcne.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcne.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libcneapiclient.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcneapiclient.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libcneoplookup.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcneoplookup.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libcneqmiutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcneqmiutils.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libwms.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwms.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libwqe.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwqe.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libxml.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libxml.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.data.factory@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.data.factory@2.0.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.data.cne.internal.api@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.cne.internal.api@1.0.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.data.cne.internal.constants@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.cne.internal.constants@1.0.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.data.cne.internal.server@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.cne.internal.server@1.0.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.data.connection@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.connection@1.0.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.data.connection@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.connection@1.1.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.data.iwlan@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.iwlan@1.0.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.data.latency@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.latency@1.0.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.data.qmi@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.qmi@1.0.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.latency@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.latency@2.0.so \
-
-# DPM - from daisy - daisy_sprout:10/QKQ1.191002.002/V11.0.2.0.QDLMIXM
-PRODUCT_COPY_FILES += \
-    vendor/lge/msm8996-common/proprietary/product/bin/dpmd:$(TARGET_COPY_OUT_PRODUCT)/bin/dpmd \
-    vendor/lge/msm8996-common/proprietary/product/etc/dpm/dpm.conf:$(TARGET_COPY_OUT_PRODUCT)/etc/dpm/dpm.conf \
-    vendor/lge/msm8996-common/proprietary/product/etc/init/dpmd.rc:$(TARGET_COPY_OUT_PRODUCT)/etc/init/dpmd.rc \
-    vendor/lge/msm8996-common/proprietary/product/framework/com.qti.dpmframework.jar:$(TARGET_COPY_OUT_PRODUCT)/framework/com.qti.dpmframework.jar \
-    vendor/lge/msm8996-common/proprietary/product/framework/dpmapi.jar:$(TARGET_COPY_OUT_PRODUCT)/framework/dpmapi.jar \
-    vendor/lge/msm8996-common/proprietary/product/etc/permissions/com.qti.dpmframework.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.qti.dpmframework.xml \
-    vendor/lge/msm8996-common/proprietary/product/etc/permissions/dpmapi.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/dpmapi.xml \
-    vendor/lge/msm8996-common/proprietary/product/lib64/com.qualcomm.qti.dpm.api@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/com.qualcomm.qti.dpm.api@1.0.so \
-    vendor/lge/msm8996-common/proprietary/product/lib64/libdpmctmgr.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libdpmctmgr.so \
-    vendor/lge/msm8996-common/proprietary/product/lib64/libdpmfdmgr.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libdpmfdmgr.so \
-    vendor/lge/msm8996-common/proprietary/product/lib64/libdpmframework.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libdpmframework.so \
-    vendor/lge/msm8996-common/proprietary/product/lib64/libdpmtcm.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libdpmtcm.so \
-    vendor/lge/msm8996-common/proprietary/vendor/bin/dpmQmiMgr:$(TARGET_COPY_OUT_VENDOR)/bin/dpmQmiMgr \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/init/dataadpl.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dataadpl.rc \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/init/dataqti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dataqti.rc \
     vendor/lge/msm8996-common/proprietary/vendor/etc/init/dpmQmiMgr.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dpmQmiMgr.rc \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.qualcomm.qti.dpm.api@1.0.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libdpmqmihal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdpmqmihal.so \
-
-# NFC
-PRODUCT_COPY_FILES += \
-    vendor/lge/msm8996-common/proprietary/vendor/firmware/libpn548ad_fw.so:$(TARGET_COPY_OUT_VENDOR)/lib/libpn548ad_fw.so \
-
-# Postprocessing - from daisy - daisy_sprout:10/QKQ1.191002.002/V11.0.2.0.QDLMIXM
-PRODUCT_COPY_FILES += \
-    vendor/lge/msm8996-common/proprietary/product/lib64/vendor.display.color@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.display.color@1.0.so \
-    vendor/lge/msm8996-common/proprietary/product/lib64/vendor.display.postproc@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.display.postproc@1.0.so \
-    vendor/lge/msm8996-common/proprietary/product/lib64/vendor.qti.hardware.qdutils_disp@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.qdutils_disp@1.0.so \
-    vendor/lge/msm8996-common/proprietary/product/lib/vendor.display.color@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.display.color@1.0.so \
-    vendor/lge/msm8996-common/proprietary/product/lib/vendor.display.postproc@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.display.postproc@1.0.so \
-    vendor/lge/msm8996-common/proprietary/product/lib/vendor.qti.hardware.qdutils_disp@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.qdutils_disp@1.0.so \
-    vendor/lge/msm8996-common/proprietary/vendor/bin/hw/vendor.display.color@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.display.color@1.0-service \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/init/init.lge.bootproperty_trigger.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.lge.bootproperty_trigger.rc \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/init/netmgrd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/netmgrd.rc \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/init/port-bridge.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/port-bridge.rc \
     vendor/lge/msm8996-common/proprietary/vendor/etc/init/vendor.display.color@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.display.color@1.0-service.rc \
-    vendor/lge/msm8996-common/proprietary/vendor/bin/hw/vendor.qti.hardware.qdutils_disp@1.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.qdutils_disp@1.0-service-qti \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/init/vendor.qti.hardware.qdutils_disp@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.qdutils_disp@1.0-service-qti.rc \
-    vendor/lge/msm8996-common/proprietary/vendor/bin/mm-pp-dpps:$(TARGET_COPY_OUT_VENDOR)/bin/mm-pp-dpps \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libdisp-aba.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdisp-aba.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.display.color@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.color@1.0.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.display.color@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.color@1.1.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.display.color@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.color@1.2.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.display.postproc@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.postproc@1.0.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.qdutils_disp@1.0.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/vendor.display.color@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.display.color@1.0.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/vendor.display.color@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.display.color@1.1.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/vendor.display.color@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.display.color@1.2.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/vendor.display.postproc@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.display.postproc@1.0.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/vendor.qti.hardware.qdutils_disp@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.qdutils_disp@1.0.so \
-
-# Perf - from daisy - daisy_sprout:10/QKQ1.191002.002/V11.0.2.0.QDLMIXM
-PRODUCT_COPY_FILES += \
-    vendor/lge/msm8996-common/proprietary/vendor/bin/energy-awareness:$(TARGET_COPY_OUT_VENDOR)/bin/energy-awareness \
-    vendor/lge/msm8996-common/proprietary/vendor/bin/msm_irqbalance:$(TARGET_COPY_OUT_VENDOR)/bin/msm_irqbalance \
-    vendor/lge/msm8996-common/proprietary/vendor/bin/hw/vendor.qti.hardware.perf@2.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.perf@2.0-service \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/init/vendor.lge.hardware.bootproperty@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.lge.hardware.bootproperty@1.0-service.rc \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/init/vendor.lge.hardware.configstore@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.lge.hardware.configstore@1.0-service.rc \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/init/vendor.lge.hardware.platform@1.1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.lge.hardware.platform@1.1-service.rc \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/init/vendor.lge.hardware.property@1.2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.lge.hardware.property@1.2-service.rc \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/init/vendor.lge.hardware.sysnode-1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.lge.hardware.sysnode-1.0-service.rc \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/init/vendor.qti.gnss@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.gnss@1.0-service.rc \
     vendor/lge/msm8996-common/proprietary/vendor/etc/init/vendor.qti.hardware.perf@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.perf@2.0-service.rc \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libperfgluelayer.so:$(TARGET_COPY_OUT_VENDOR)/lib/libperfgluelayer.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libqti-perfd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqti-perfd.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libqti-perfd-client.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqti-perfd-client.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libqti-util.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqti-util.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/vendor.qti.hardware.perf@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.perf@1.0.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/vendor.qti.hardware.perf@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.perf@2.0.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libperfconfig.so:$(TARGET_COPY_OUT_VENDOR)/lib/libperfconfig.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libperfgluelayer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libperfgluelayer.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libqti-perfd.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqti-perfd.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libqti-perfd-client.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqti-perfd-client.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libqti-util.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqti-util.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.perf@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.perf@1.0.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.perf@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.perf@2.0.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libperfconfig.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libperfconfig.so \
-
-# Perf (configs) - from oneplus3t - OnePlus/OnePlus3/OnePlus3T:9/PKQ1.181203.001/1911042108 - OOS 9.0.6
-PRODUCT_COPY_FILES += \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/init/vendor.qti.hardware.qdutils_disp@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.qdutils_disp@1.0-service-qti.rc \
     vendor/lge/msm8996-common/proprietary/vendor/etc/perf/commonresourceconfigs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/commonresourceconfigs.xml \
     vendor/lge/msm8996-common/proprietary/vendor/etc/perf/perf-profile0.conf:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perf-profile0.conf \
     vendor/lge/msm8996-common/proprietary/vendor/etc/perf/perf-profile1.conf:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perf-profile1.conf \
@@ -480,260 +375,46 @@ PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/etc/perf/perfboostsconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perfboostsconfig.xml \
     vendor/lge/msm8996-common/proprietary/vendor/etc/perf/targetconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/targetconfig.xml \
     vendor/lge/msm8996-common/proprietary/vendor/etc/perf/targetresourceconfigs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/targetresourceconfigs.xml \
-
-# Widevine - from Marlin QP1A.190711.020
-PRODUCT_COPY_FILES += \
-    vendor/lge/msm8996-common/proprietary/vendor/bin/hw/android.hardware.drm@1.1-service.widevine:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.drm@1.1-service.widevine \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.1-service.widevine.rc \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libwvhidl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwvhidl.so
-
-# Hexedited blobs
-PRODUCT_COPY_FILES += \
-    vendor/lge/msm8996-common/proprietary/lib64/android.hardware.gnss@8.0.so:system/lib64/android.hardware.gnss@8.0.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/lib-sec-disp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-sec-disp.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libhui.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhui.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libux.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libux.so
-
-# Sensors - from V30B
-PRODUCT_COPY_FILES += \
-    vendor/lge/msm8996-common/proprietary/vendor/bin/sensors.qti:$(TARGET_COPY_OUT_VENDOR)/bin/sensors.qti \
-    vendor/lge/msm8996-common/proprietary/framework/vendor.qti.hardware.sensorscalibrate-V1.0-java.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/vendor.qti.hardware.sensorscalibrate-V1.0-java.jar \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/hw/activity_recognition.msm8996.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/activity_recognition.msm8996.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libsensor1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsensor1.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libsensor_reg.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsensor_reg.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/sensor_calibrate.so:$(TARGET_COPY_OUT_VENDOR)/lib/sensor_calibrate.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/sensors.ssc.so:$(TARGET_COPY_OUT_VENDOR)/lib/sensors.ssc.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/hw/activity_recognition.msm8996.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/activity_recognition.msm8996.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libsensor1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsensor1.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libsensor_reg.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsensor_reg.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/sensor_calibrate.so:$(TARGET_COPY_OUT_VENDOR)/lib64/sensor_calibrate.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/sensors.ssc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/sensors.ssc.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libsensorndkbridge.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsensorndkbridge.so \
-    vendor/lge/msm8996-common/proprietary/lib/vendor.lge.hardware.sensors@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.lge.hardware.sensors@1.0.so \
-    vendor/lge/msm8996-common/proprietary/lib/vendor.qti.hardware.sensorscalibrate@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.qti.hardware.sensorscalibrate@1.0.so \
-    vendor/lge/msm8996-common/proprietary/lib64/vendor.lge.hardware.sensors@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.lge.hardware.sensors@1.0.so \
-    vendor/lge/msm8996-common/proprietary/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so \
-
-# Listen - from V30B
-PRODUCT_COPY_FILES += \
-    vendor/lge/msm8996-common/proprietary/framework/vendor.qti.voiceprint-V1.0-java.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/vendor.qti.voiceprint-V1.0-java.jar \
-    vendor/lge/msm8996-common/proprietary/lib/vendor.qti.voiceprint@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.qti.voiceprint@1.0.so \
-    vendor/lge/msm8996-common/proprietary/lib64/vendor.qti.voiceprint@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.qti.voiceprint@1.0.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/hw/sound_trigger.primary.msm8996.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/sound_trigger.primary.msm8996.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libadpcmdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libadpcmdec.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libsmwrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsmwrapper.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/vendor.qti.voiceprint@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.voiceprint@1.0.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/hw/sound_trigger.primary.msm8996.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/sound_trigger.primary.msm8996.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.voiceprint@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.voiceprint@1.0.so \
-
-# RIL Stack from leeco
-# IMS - from Gemini 8.0.0/OPR1.170623.032/8.5.24
-PRODUCT_COPY_FILES += \
-    vendor/lge/msm8996-common/proprietary/etc/permissions/com.qualcomm.qti.imscmservice.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.qualcomm.qti.imscmservice.xml \
-    vendor/lge/msm8996-common/proprietary/etc/permissions/qti-vzw-ims-internal.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/qti-vzw-ims-internal.xml \
-    vendor/lge/msm8996-common/proprietary/framework/com.qualcomm.qti.imscmservice@1.0-java.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/com.qualcomm.qti.imscmservice@1.0-java.jar \
-    vendor/lge/msm8996-common/proprietary/lib64/com.qualcomm.qti.imscmservice@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/com.qualcomm.qti.imscmservice@1.0.so \
-    vendor/lge/msm8996-common/proprietary/lib64/lib-imscamera.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/lib-imscamera.so \
-    vendor/lge/msm8996-common/proprietary/lib64/lib-imsvideocodec.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/lib-imsvideocodec.so \
-    vendor/lge/msm8996-common/proprietary/lib64/lib-imsvt.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/lib-imsvt.so \
-    vendor/lge/msm8996-common/proprietary/lib64/lib-imsvtextutils.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/lib-imsvtextutils.so \
-    vendor/lge/msm8996-common/proprietary/lib64/lib-imsvtutils.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/lib-imsvtutils.so \
-    vendor/lge/msm8996-common/proprietary/lib64/libdiag_system.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libdiag_system.so \
-    vendor/lge/msm8996-common/proprietary/lib64/libimscamera_jni.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libimscamera_jni.so \
-    vendor/lge/msm8996-common/proprietary/lib64/libimsmedia_jni.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libimsmedia_jni.so \
-    vendor/lge/msm8996-common/proprietary/lib64/librcc.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/librcc.so \
-    vendor/lge/msm8996-common/proprietary/lib64/vendor.qti.imsrtpservice@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.qti.imsrtpservice@1.0.so \
-    vendor/lge/msm8996-common/proprietary/vendor/bin/ims_rtp_daemon:$(TARGET_COPY_OUT_VENDOR)/bin/ims_rtp_daemon \
-    vendor/lge/msm8996-common/proprietary/vendor/bin/imsdatadaemon:$(TARGET_COPY_OUT_VENDOR)/bin/imsdatadaemon \
-    vendor/lge/msm8996-common/proprietary/vendor/bin/imsqmidaemon:$(TARGET_COPY_OUT_VENDOR)/bin/imsqmidaemon \
-    vendor/lge/msm8996-common/proprietary/vendor/bin/imsrcsd:$(TARGET_COPY_OUT_VENDOR)/bin/imsrcsd \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/qdcm_calib_data_SW49408_1440_2880_cmd_mode_dsc_dsi_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_SW49408_1440_2880_cmd_mode_dsc_dsi_panel.xml \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/xtra_root_cert.pem:$(TARGET_COPY_OUT_VENDOR)/etc/xtra_root_cert.pem \
+    vendor/lge/msm8996-common/proprietary/vendor/firmware/cpp_firmware_v1_10_0.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/cpp_firmware_v1_10_0.fw \
+    vendor/lge/msm8996-common/proprietary/vendor/firmware/cpp_firmware_v1_12_0.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/cpp_firmware_v1_12_0.fw \
+    vendor/lge/msm8996-common/proprietary/vendor/firmware/cpp_firmware_v1_1_1.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/cpp_firmware_v1_1_1.fw \
+    vendor/lge/msm8996-common/proprietary/vendor/firmware/cpp_firmware_v1_1_6.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/cpp_firmware_v1_1_6.fw \
+    vendor/lge/msm8996-common/proprietary/vendor/firmware/cpp_firmware_v1_2_0.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/cpp_firmware_v1_2_0.fw \
+    vendor/lge/msm8996-common/proprietary/vendor/firmware/cpp_firmware_v1_4_0.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/cpp_firmware_v1_4_0.fw \
+    vendor/lge/msm8996-common/proprietary/vendor/firmware/cpp_firmware_v1_5_0.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/cpp_firmware_v1_5_0.fw \
+    vendor/lge/msm8996-common/proprietary/vendor/firmware/cpp_firmware_v1_5_1.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/cpp_firmware_v1_5_1.fw \
+    vendor/lge/msm8996-common/proprietary/vendor/firmware/cpp_firmware_v1_5_2.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/cpp_firmware_v1_5_2.fw \
+    vendor/lge/msm8996-common/proprietary/vendor/firmware/cpp_firmware_v1_6_0.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/cpp_firmware_v1_6_0.fw \
+    vendor/lge/msm8996-common/proprietary/vendor/firmware/cpp_firmware_v1_8_0.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/cpp_firmware_v1_8_0.fw \
+    vendor/lge/msm8996-common/proprietary/vendor/firmware/leia_pfp_470.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/leia_pfp_470.fw \
+    vendor/lge/msm8996-common/proprietary/vendor/firmware/leia_pm4_470.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/leia_pm4_470.fw \
+    vendor/lge/msm8996-common/proprietary/vendor/firmware/libpn548ad_fw.so:$(TARGET_COPY_OUT_VENDOR)/firmware/libpn548ad_fw.so \
     vendor/lge/msm8996-common/proprietary/vendor/framework/qti-vzw-ims-internal.jar:$(TARGET_COPY_OUT_VENDOR)/framework/qti-vzw-ims-internal.jar \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/com.qualcomm.qti.imscmservice@1.0_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.qualcomm.qti.imscmservice@1.0_vendor.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/lib-dplmedia.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-dplmedia.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/lib-imsSDP.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-imsSDP.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/lib-imscmservice.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-imscmservice.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/lib-imsdpl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-imsdpl.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/lib-imsqimf.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-imsqimf.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/lib-imsxml.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-imsxml.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/lib-rtpcommon.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-rtpcommon.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/lib-rtpcore.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-rtpcore.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/lib-rtpdaemoninterface.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-rtpdaemoninterface.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/lib-rtpsl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-rtpsl.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/lib-uceservice.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-uceservice.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.imsrtpservice@1.0_vendor.so \
-
-# IMS - from oneplus3t - OnePlus/OnePlus3/OnePlus3T:9/PKQ1.181203.001/1911042108 - OOS 9.0.6
-PRODUCT_COPY_FILES += \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.ims.rcsconfig@1.0.so \
-
-# QMI - from Gemini 8.0.0/OPR1.170623.032/8.5.24
-PRODUCT_COPY_FILES += \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/permissions/qti_libpermissions.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/qti_libpermissions.xml \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/permissions/qti_permissions.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/qti_permissions.xml \
-    vendor/lge/msm8996-common/proprietary/vendor/bin/irsc_util:$(TARGET_COPY_OUT_VENDOR)/bin/irsc_util \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libdiag.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdiag.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libdsi_netctrl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdsi_netctrl.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libdsutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdsutils.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libidl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libidl.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libqcci_legacy.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqcci_legacy.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libqdi.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqdi.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libqdp.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqdp.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libqmi_client_helper.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqmi_client_helper.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libqmi_client_qmux.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqmi_client_qmux.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libqmi_common_so.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqmi_common_so.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libqmi_csi.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqmi_csi.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libqmi_encdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqmi_encdec.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libqmi.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqmi.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libqmiservices.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqmiservices.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libsmemlog.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsmemlog.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libdiag.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdiag.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libdsi_netctrl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdsi_netctrl.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libdsutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdsutils.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libidl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libidl.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libqcci_legacy.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqcci_legacy.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libqdi.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqdi.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libqdp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqdp.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libqmi_client_helper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqmi_client_helper.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libqmi_client_qmux.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqmi_client_qmux.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libqmi_common_so.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqmi_common_so.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libqmi_csi.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqmi_csi.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libqmi_encdec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqmi_encdec.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libqmi.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqmi.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libqmiservices.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqmiservices.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libsmemlog.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsmemlog.so \
-
-# QMI - from oneplus3t - OnePlus/OnePlus3/OnePlus3T:9/PKQ1.181203.001/1911042108 - OOS 9.0.6
-PRODUCT_COPY_FILES += \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libpdmapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpdmapper.so \
-
-# QMI - from daisy - daisy_sprout:10/QKQ1.191002.002/V11.0.2.0.QDLMIXM
-PRODUCT_COPY_FILES += \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libqmi_cci.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqmi_cci.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libqmi_cci.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqmi_cci.so \
-
-# QMI - Gemini 8.0.0/OPR1.170623.032/8.5.24
-PRODUCT_COPY_FILES += \
-    vendor/lge/msm8996-common/proprietary/etc/permissions/qcrilhook.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/qcrilhook.xml \
-    vendor/lge/msm8996-common/proprietary/etc/permissions/telephonyservice.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/telephonyservice.xml \
-    vendor/lge/msm8996-common/proprietary/framework/QtiTelephonyServicelibrary.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/QtiTelephonyServicelibrary.jar \
-    vendor/lge/msm8996-common/proprietary/framework/qcrilhook.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/qcrilhook.jar \
-    vendor/lge/msm8996-common/proprietary/product/framework/qti-telephony-common.jar:$(TARGET_COPY_OUT_SYSTEM)/product/framework/qti-telephony-common.jar \
-    vendor/lge/msm8996-common/proprietary/vendor/bin/ATFWD-daemon:$(TARGET_COPY_OUT_VENDOR)/bin/ATFWD-daemon \
-    vendor/lge/msm8996-common/proprietary/vendor/bin/netmgrd:$(TARGET_COPY_OUT_VENDOR)/bin/netmgrd \
-    vendor/lge/msm8996-common/proprietary/vendor/bin/port-bridge:$(TARGET_COPY_OUT_VENDOR)/bin/port-bridge \
-    vendor/lge/msm8996-common/proprietary/vendor/bin/qti:$(TARGET_COPY_OUT_VENDOR)/bin/qti \
-    vendor/lge/msm8996-common/proprietary/vendor/bin/rmt_storage:$(TARGET_COPY_OUT_VENDOR)/bin/rmt_storage \
-    vendor/lge/msm8996-common/proprietary/vendor/bin/tftp_server:$(TARGET_COPY_OUT_VENDOR)/bin/tftp_server \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/data/dsi_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/data/dsi_config.xml \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/data/netmgr_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/data/netmgr_config.xml \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libmdmdetect.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmdmdetect.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libconfigdb.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libconfigdb.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/liblqe.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblqe.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libmdmdetect.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmdmdetect.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libnetmgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnetmgr.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libqcmaputils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqcmaputils.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libqsocket.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqsocket.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libqrtr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqrtr.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libril-qc-ltedirectdisc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libril-qc-ltedirectdisc.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libril-qc-qmi-1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libril-qc-qmi-1.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libril-qc-radioconfig.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libril-qc-radioconfig.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libril-qcril-hook-oem.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libril-qcril-hook-oem.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/librilqmiservices.so:$(TARGET_COPY_OUT_VENDOR)/lib64/librilqmiservices.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libsettings.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsettings.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libsystem_health_mon.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsystem_health_mon.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.radio.am@1.0_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.am@1.0_vendor.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.radio.atcmdfwd@1.0_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.atcmdfwd@1.0_vendor.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.radio.ims@1.0_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.ims@1.0_vendor.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.radio.lpa@1.0_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.lpa@1.0_vendor.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.radio.qcrilhook@1.0_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.qcrilhook@1.0_vendor.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.radio.qtiradio@1.0_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.qtiradio@1.0_vendor.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.radio.uim@1.0_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.uim@1.0_vendor.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0_vendor.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0_vendor.so \
-    vendor/lge/msm8996-common/proprietary/vendor/radio/qcril_database/qcril.db:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/qcril.db \
-
-# RIL - from daisy - daisy_sprout:10/QKQ1.191002.002/V11.0.2.0.QDLMIXM
-PRODUCT_COPY_FILES += \
-    vendor/lge/msm8996-common/proprietary/vendor/bin/adpl:$(TARGET_COPY_OUT_VENDOR)/bin/adpl \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/init/dataadpl.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dataadpl.rc \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/init/dataqti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dataqti.rc \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/init/netmgrd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/netmgrd.rc \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/init/port-bridge.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/port-bridge.rc \
-
-# Haxx
-PRODUCT_COPY_FILES += \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libbase-hax.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbase-hax.so
-
-# Graphics (Adreno) - from daisy - daisy_sprout:10/QKQ1.191002.002/V11.0.2.0.QDLMIXM
-PRODUCT_COPY_FILES += \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0-halimpl.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.qualcomm.qti.wifidisplayhal@1.0-halimpl.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/egl/eglSubDriverAndroid.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/eglSubDriverAndroid.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/egl/libEGL_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/libEGL_adreno.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/egl/libGLESv1_CM_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/libGLESv1_CM_adreno.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/egl/libGLESv2_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/libGLESv2_adreno.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/egl/libQTapGLES.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/libQTapGLES.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/egl/libq3dtools_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/libq3dtools_adreno.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/hw/activity_recognition.msm8996.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/activity_recognition.msm8996.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/hw/camera.msm8996.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/camera.msm8996.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/hw/fingerprint.msm8996.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/fingerprint.msm8996.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/hw/gatekeeper.msm8996.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/gatekeeper.msm8996.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/hw/keystore.msm8996.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/keystore.msm8996.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/hw/sound_trigger.primary.msm8996.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/sound_trigger.primary.msm8996.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/hw/vendor.lge.hardware.bootproperty@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.lge.hardware.bootproperty@1.0-impl.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/hw/vendor.lge.hardware.property@1.2-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.lge.hardware.property@1.2-impl.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/hw/vendor.lge.hardware.sysnode@1.0-client.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.lge.hardware.sysnode@1.0-client.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/hw/vendor.lge.hardware.sysnode@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.lge.hardware.sysnode@1.0-impl.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/hw/vulkan.msm8996.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vulkan.msm8996.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libAutoContrast.so:$(TARGET_COPY_OUT_VENDOR)/lib/libAutoContrast.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libC2D2.so:$(TARGET_COPY_OUT_VENDOR)/lib/libC2D2.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libCB.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCB.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libOpenCL.so:$(TARGET_COPY_OUT_VENDOR)/lib/libOpenCL.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libRSDriver_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib/libRSDriver_adreno.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libadreno_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libadreno_utils.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libbccQTI.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbccQTI.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libc2d30_bltlib.so:$(TARGET_COPY_OUT_VENDOR)/lib/libc2d30_bltlib.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libgsl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgsl.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libllvm-glnext.so:$(TARGET_COPY_OUT_VENDOR)/lib/libllvm-glnext.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libllvm-qcom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libllvm-qcom.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/librs_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib/librs_adreno.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/librs_adreno_sha1.so:$(TARGET_COPY_OUT_VENDOR)/lib/librs_adreno_sha1.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libfastcvopt.so:$(TARGET_COPY_OUT_VENDOR)/lib/libfastcvopt.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/egl/eglSubDriverAndroid.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/eglSubDriverAndroid.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/egl/libEGL_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/libEGL_adreno.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/egl/libGLESv1_CM_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/libGLESv1_CM_adreno.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/egl/libGLESv2_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/libGLESv2_adreno.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/egl/libQTapGLES.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/libQTapGLES.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/egl/libq3dtools_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/libq3dtools_adreno.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libC2D2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libC2D2.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libCB.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCB.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libOpenCL.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libOpenCL.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libRSDriver_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libRSDriver_adreno.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libadreno_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libadreno_utils.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libbccQTI.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbccQTI.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libc2d30_bltlib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libc2d30_bltlib.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libgsl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgsl.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libllvm-glnext.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libllvm-glnext.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libllvm-qcom.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libllvm-qcom.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/librs_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib64/librs_adreno.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/librs_adreno_sha1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/librs_adreno_sha1.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libfastcvopt.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfastcvopt.so \
-
-
-# Graphics (HDR) - from daisy - daisy_sprout:10/QKQ1.191002.002/V11.0.2.0.QDLMIXM
-PRODUCT_COPY_FILES += \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libhdr_tm.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhdr_tm.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libhdr_tm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhdr_tm.so \
-
-# Graphics (SDM) - from daisy - daisy_sprout:10/QKQ1.191002.002/V11.0.2.0.QDLMIXM
-PRODUCT_COPY_FILES += \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libscalar.so:$(TARGET_COPY_OUT_VENDOR)/lib/libscalar.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libsdm-color.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsdm-color.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libsdm-diag.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsdm-diag.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libsdmextension.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsdmextension.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libtinyxml2_1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtinyxml2_1.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libscalar.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libscalar.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libsdm-color.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsdm-color.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libsdm-diag.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsdm-diag.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libsdmextension.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsdmextension.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libtinyxml2_1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtinyxml2_1.so \
-
-# Graphics (Vulkan) - from daisy - daisy_sprout:10/QKQ1.191002.002/V11.0.2.0.QDLMIXM
-PRODUCT_COPY_FILES += \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/hw/vulkan.msm8996.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vulkan.msm8996.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/hw/vulkan.msm8996.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vulkan.msm8996.so \
-
-# Media - from daisy - daisy_sprout:10/QKQ1.191002.002/V11.0.2.0.QDLMIXM
-PRODUCT_COPY_FILES += \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libCmcPdaf.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCmcPdaf.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libI420colorconvert.so:$(TARGET_COPY_OUT_VENDOR)/lib/libI420colorconvert.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libmm-color-convertor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmm-color-convertor.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libOmxAacDec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libOmxAacDec.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libOmxAlacDec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libOmxAlacDec.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libOmxAlacDecSw.so:$(TARGET_COPY_OUT_VENDOR)/lib/libOmxAlacDecSw.so \
@@ -747,123 +428,34 @@ PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libOmxQcelp13Dec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libOmxQcelp13Dec.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libOmxVideoDSMode.so:$(TARGET_COPY_OUT_VENDOR)/lib/libOmxVideoDSMode.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libOmxWmaDec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libOmxWmaDec.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libvqzip.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvqzip.so \
-
-# Thermal - from daisy - daisy_sprout:10/QKQ1.191002.002/V11.0.2.0.QDLMIXM
-PRODUCT_COPY_FILES += \
-    vendor/lge/msm8996-common/proprietary/vendor/bin/thermal-engine:$(TARGET_COPY_OUT_VENDOR)/bin/thermal-engine \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libthermalfeature.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libthermalfeature.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libthermalioctl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libthermalioctl.so \
-
-# Time services - from daisy - daisy_sprout:10/QKQ1.191002.002/V11.0.2.0.QDLMIXM
-PRODUCT_COPY_FILES += \
-    vendor/lge/msm8996-common/proprietary/vendor/bin/time_daemon:$(TARGET_COPY_OUT_VENDOR)/bin/time_daemon \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libtime_genoff.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtime_genoff.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libtime_genoff.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtime_genoff.so \
-
-# g6-common
-PRODUCT_COPY_FILES += \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camera_config.xml \
-    vendor/lge/msm8996-common/proprietary/product/etc/camera_config.xml:system/product/etc/camera_config.xml \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/finger_detection/skintone_db.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/finger_detection/skintone_db.bin \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/food/1_food.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/food/1_food.dat \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/hi553_cowell_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/hi553_cowell_chromatix.xml \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/hi553_lgit_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/hi553_lgit_chromatix.xml \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/imx258_imtech_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/imx258_imtech_chromatix.xml \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/imx258_lgit_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/imx258_lgit_chromatix.xml \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/imx258_mono_imtech_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/imx258_mono_imtech_chromatix.xml \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/imx258_mono_lgit_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/imx258_mono_lgit_chromatix.xml \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/s5k3m3_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k3m3_chromatix.xml \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/selfie/1_selfie.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/selfie/1_selfie.dat \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/selfie/2_selfie.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/selfie/2_selfie.dat \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/selfie/3_selfie.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/selfie/3_selfie.dat \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/selfie/4_selfie.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/selfie/4_selfie.dat \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/selfie/5_selfie.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/selfie/5_selfie.dat \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/selfie/6_selfie.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/selfie/6_selfie.dat \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/selfie/7_selfie.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/selfie/7_selfie.dat \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/selfie/8_selfie.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/selfie/8_selfie.dat \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/selfie/9_selfie.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/selfie/9_selfie.dat \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/0_smartcam.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/0_smartcam.dat \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/1_smartcam_pet.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/1_smartcam_pet.dat \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/2_smartcam_pet.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/2_smartcam_pet.dat \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/3_smartcam_pet.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/3_smartcam_pet.dat \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/4_smartcam_pet.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/4_smartcam_pet.dat \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/5_smartcam_city.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/5_smartcam_city.dat \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/6_smartcam_city.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/6_smartcam_city.dat \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/7_smartcam_city.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/7_smartcam_city.dat \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/8_smartcam_city.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/8_smartcam_city.dat \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/9_smartcam_food.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/9_smartcam_food.dat \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/10_smartcam_food.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/10_smartcam_food.dat \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/11_smartcam_food.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/11_smartcam_food.dat \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/12_smartcam_food.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/12_smartcam_food.dat \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/13_smartcam_person_rear.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/13_smartcam_person_rear.dat \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/14_smartcam_person_rear.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/14_smartcam_person_rear.dat \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/15_smartcam_person_rear.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/15_smartcam_person_rear.dat \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/16_smartcam_person_rear.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/16_smartcam_person_rear.dat \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/17_smartcam_landscape.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/17_smartcam_landscape.dat \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/18_smartcam_landscape.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/18_smartcam_landscape.dat \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/19_smartcam_landscape.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/19_smartcam_landscape.dat \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/20_smartcam_landscape.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/20_smartcam_landscape.dat \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/21_smartcam_sunset_sunrise.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/21_smartcam_sunset_sunrise.dat \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/22_smartcam_sunset_sunrise.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/22_smartcam_sunset_sunrise.dat \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/23_smartcam_sunset_sunrise.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/23_smartcam_sunset_sunrise.dat \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/24_smartcam_sunset_sunrise.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/24_smartcam_sunset_sunrise.dat \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/25_smartcam_flower.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/25_smartcam_flower.dat \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/26_smartcam_flower.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/26_smartcam_flower.dat \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/27_smartcam_flower.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/27_smartcam_flower.dat \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/28_smartcam_flower.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/28_smartcam_flower.dat \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/65_smartcam_person_front.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/65_smartcam_person_front.dat \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/66_smartcam_person_front.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/66_smartcam_person_front.dat \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/67_smartcam_person_front.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/67_smartcam_person_front.dat \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/68_smartcam_person_front.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/68_smartcam_person_front.dat \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/91_smartcam_basic_01.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/91_smartcam_basic_01.dat \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/92_smartcam_basic_02.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/92_smartcam_basic_02.dat \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/93_smartcam_basic_03.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/93_smartcam_basic_03.dat \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/camera/smartcam/94_smartcam_basic_04.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/94_smartcam_basic_04.dat \
-    vendor/lge/msm8996-common/proprietary/vendor/firmware/bu24235_dl_program_Lucy_LGITAct_ICG1020S_rev10_S_data1.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/bu24235_dl_program_Lucy_LGITAct_ICG1020S_rev10_S_data1.bin \
-    vendor/lge/msm8996-common/proprietary/vendor/firmware/bu24235_dl_program_Lucy_LGITAct_ICG1020S_rev10_S_data2.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/bu24235_dl_program_Lucy_LGITAct_ICG1020S_rev10_S_data2.bin \
-    vendor/lge/msm8996-common/proprietary/vendor/firmware/bu24235_dl_program_Lucy_LGITAct_ICG1020S_rev6_S_data1.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/bu24235_dl_program_Lucy_LGITAct_ICG1020S_rev6_S_data1.bin \
-    vendor/lge/msm8996-common/proprietary/vendor/firmware/bu24235_dl_program_Lucy_LGITAct_ICG1020S_rev6_S_data2.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/bu24235_dl_program_Lucy_LGITAct_ICG1020S_rev6_S_data2.bin \
-    vendor/lge/msm8996-common/proprietary/vendor/firmware/bu24235_dl_program_Lucy_LGITAct_ICG1020S_rev7_S_data1.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/bu24235_dl_program_Lucy_LGITAct_ICG1020S_rev7_S_data1.bin \
-    vendor/lge/msm8996-common/proprietary/vendor/firmware/bu24235_dl_program_Lucy_LGITAct_ICG1020S_rev7_S_data2.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/bu24235_dl_program_Lucy_LGITAct_ICG1020S_rev7_S_data2.bin \
-    vendor/lge/msm8996-common/proprietary/vendor/firmware/bu24235_dl_program_Lucy_LGITAct_ICG1020S_rev8_S_data1.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/bu24235_dl_program_Lucy_LGITAct_ICG1020S_rev8_S_data1.bin \
-    vendor/lge/msm8996-common/proprietary/vendor/firmware/bu24235_dl_program_Lucy_LGITAct_ICG1020S_rev8_S_data2.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/bu24235_dl_program_Lucy_LGITAct_ICG1020S_rev8_S_data2.bin \
-    vendor/lge/msm8996-common/proprietary/vendor/firmware/bu24235_dl_program_Lucy_LGITAct_OPAF_ICG1020S_rev1_S_data1_0x01.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/bu24235_dl_program_Lucy_LGITAct_OPAF_ICG1020S_rev1_S_data1_0x01.bin \
-    vendor/lge/msm8996-common/proprietary/vendor/firmware/bu24235_dl_program_Lucy_LGITAct_OPAF_ICG1020S_rev1_S_data2_0x01.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/bu24235_dl_program_Lucy_LGITAct_OPAF_ICG1020S_rev1_S_data2_0x01.bin \
-    vendor/lge/msm8996-common/proprietary/vendor/firmware/bu24235_dl_program_Lucy_MTMAct_ICG1020S_rev4_S_data1.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/bu24235_dl_program_Lucy_MTMAct_ICG1020S_rev4_S_data1.bin \
-    vendor/lge/msm8996-common/proprietary/vendor/firmware/bu24235_dl_program_Lucy_MTMAct_ICG1020S_rev4_S_data2.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/bu24235_dl_program_Lucy_MTMAct_ICG1020S_rev4_S_data2.bin \
-    vendor/lge/msm8996-common/proprietary/vendor/firmware/bu24235_dl_program_Lucy_MTMAct_ICG1020S_rev6_S_data1.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/bu24235_dl_program_Lucy_MTMAct_ICG1020S_rev6_S_data1.bin \
-    vendor/lge/msm8996-common/proprietary/vendor/firmware/bu24235_dl_program_Lucy_MTMAct_ICG1020S_rev6_S_data2.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/bu24235_dl_program_Lucy_MTMAct_ICG1020S_rev6_S_data2.bin \
-    vendor/lge/msm8996-common/proprietary/vendor/firmware/bu24235_dl_program_Lucy_MTMAct_ICG1020S_rev7_S_data1.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/bu24235_dl_program_Lucy_MTMAct_ICG1020S_rev7_S_data1.bin \
-    vendor/lge/msm8996-common/proprietary/vendor/firmware/bu24235_dl_program_Lucy_MTMAct_ICG1020S_rev7_S_data2.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/bu24235_dl_program_Lucy_MTMAct_ICG1020S_rev7_S_data2.bin \
-    vendor/lge/msm8996-common/proprietary/vendor/firmware/bu24235_dl_program_Lucy_MTMAct_ICG1020S_rev8_S_data1.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/bu24235_dl_program_Lucy_MTMAct_ICG1020S_rev8_S_data1.bin \
-    vendor/lge/msm8996-common/proprietary/vendor/firmware/bu24235_dl_program_Lucy_MTMAct_ICG1020S_rev8_S_data2.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/bu24235_dl_program_Lucy_MTMAct_ICG1020S_rev8_S_data2.bin \
-    vendor/lge/msm8996-common/proprietary/vendor/bin/mm-qcamera-app:$(TARGET_COPY_OUT_VENDOR)/bin/mm-qcamera-app \
-    vendor/lge/msm8996-common/proprietary/vendor/bin/mm-qcamera-daemon:$(TARGET_COPY_OUT_VENDOR)/bin/mm-qcamera-daemon \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/acdbdata/Bluetooth_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/Bluetooth_cal.acdb \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/acdbdata/General_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/General_cal.acdb \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/acdbdata/Global_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/Global_cal.acdb \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/acdbdata/Handset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/Handset_cal.acdb \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/acdbdata/Hdmi_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/Hdmi_cal.acdb \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/acdbdata/Headset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/Headset_cal.acdb \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/acdbdata/Speaker_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/Speaker_cal.acdb \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/acdbdata/plus/Bluetooth_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/plus/Bluetooth_cal.acdb \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/acdbdata/plus/General_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/plus/General_cal.acdb \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/acdbdata/plus/Global_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/plus/Global_cal.acdb \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/acdbdata/plus/Handset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/plus/Handset_cal.acdb \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/acdbdata/plus/Hdmi_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/plus/Hdmi_cal.acdb \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/acdbdata/plus/Headset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/plus/Headset_cal.acdb \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/acdbdata/plus/Speaker_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/plus/Speaker_cal.acdb \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/dolby_vision.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/dolby_vision.cfg \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/qdcm_calib_data_SW49408_1440_2880_cmd_mode_dsc_dsi_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_SW49408_1440_2880_cmd_mode_dsc_dsi_panel.xml \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/hw/camera.msm8996.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/camera.msm8996.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libAutoContrast.so:$(TARGET_COPY_OUT_VENDOR)/lib/libAutoContrast.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libCmcPdaf.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCmcPdaf.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libOpenCL.so:$(TARGET_COPY_OUT_VENDOR)/lib/libOpenCL.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libQSEEComAPI.so:$(TARGET_COPY_OUT_VENDOR)/lib/libQSEEComAPI.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libRSDriver_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib/libRSDriver_adreno.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libSJFingerDetect.so:$(TARGET_COPY_OUT_VENDOR)/lib/libSJFingerDetect.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libStDrvInt.so:$(TARGET_COPY_OUT_VENDOR)/lib/libStDrvInt.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libacdb-fts.so:$(TARGET_COPY_OUT_VENDOR)/lib/libacdb-fts.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libacdbloader.so:$(TARGET_COPY_OUT_VENDOR)/lib/libacdbloader.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libacdbrtac.so:$(TARGET_COPY_OUT_VENDOR)/lib/libacdbrtac.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libactuator_ak7371.so:$(TARGET_COPY_OUT_VENDOR)/lib/libactuator_ak7371.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libactuator_bu24333gwl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libactuator_bu24333gwl.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libadiertac.so:$(TARGET_COPY_OUT_VENDOR)/lib/libadiertac.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libadm.so:$(TARGET_COPY_OUT_VENDOR)/lib/libadm.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libadpcmdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libadpcmdec.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libadreno_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libadreno_utils.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libadsp_default_listener.so:$(TARGET_COPY_OUT_VENDOR)/lib/libadsp_default_listener.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libadsp_hvx_callback_skel.so:$(TARGET_COPY_OUT_VENDOR)/lib/libadsp_hvx_callback_skel.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libadsp_hvx_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib/libadsp_hvx_stub.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libadsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libadsprpc.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libarcsoft_beauty_shot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libarcsoft_beauty_shot.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libarcsoft_object_tracking.so:$(TARGET_COPY_OUT_VENDOR)/lib/libarcsoft_object_tracking.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libaudcal.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaudcal.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libaudio_log_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaudio_log_utils.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libaudioalsa.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaudioalsa.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libbccQTI.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbccQTI.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libbwfocuspeaking.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbwfocuspeaking.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libc2d30_bltlib.so:$(TARGET_COPY_OUT_VENDOR)/lib/libc2d30_bltlib.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libcdsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcdsprpc.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromaflash.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromaflash.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_csidtg_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_csidtg_common.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_csidtg_cpp_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_csidtg_cpp_preview.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_csidtg_postproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_csidtg_postproc.so \
@@ -871,6 +463,7 @@ PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_csidtg_zsl_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_csidtg_zsl_preview.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_hi553_cowell_3a_vt.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_hi553_cowell_3a_vt.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_hi553_cowell_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_hi553_cowell_common.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_hi553_cowell_cpp_face_unlock.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_hi553_cowell_cpp_face_unlock.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_hi553_cowell_cpp_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_hi553_cowell_cpp_liveshot.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_hi553_cowell_cpp_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_hi553_cowell_cpp_preview.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_hi553_cowell_cpp_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_hi553_cowell_cpp_snapshot.so \
@@ -878,6 +471,8 @@ PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_hi553_cowell_cpp_vt.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_hi553_cowell_cpp_vt.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_hi553_cowell_default_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_hi553_cowell_default_preview.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_hi553_cowell_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_hi553_cowell_default_video.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_hi553_cowell_face_unlock.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_hi553_cowell_face_unlock.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_hi553_cowell_face_unlock_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_hi553_cowell_face_unlock_preview.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_hi553_cowell_isp_vt.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_hi553_cowell_isp_vt.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_hi553_cowell_postproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_hi553_cowell_postproc.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_hi553_cowell_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_hi553_cowell_preview.so \
@@ -887,6 +482,7 @@ PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_hi553_cowell_zsl_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_hi553_cowell_zsl_video.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_hi553_lgit_3a_vt.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_hi553_lgit_3a_vt.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_hi553_lgit_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_hi553_lgit_common.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_hi553_lgit_cpp_face_unlock.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_hi553_lgit_cpp_face_unlock.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_hi553_lgit_cpp_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_hi553_lgit_cpp_liveshot.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_hi553_lgit_cpp_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_hi553_lgit_cpp_preview.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_hi553_lgit_cpp_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_hi553_lgit_cpp_snapshot.so \
@@ -894,6 +490,8 @@ PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_hi553_lgit_cpp_vt.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_hi553_lgit_cpp_vt.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_hi553_lgit_default_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_hi553_lgit_default_preview.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_hi553_lgit_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_hi553_lgit_default_video.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_hi553_lgit_face_unlock.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_hi553_lgit_face_unlock.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_hi553_lgit_face_unlock_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_hi553_lgit_face_unlock_preview.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_hi553_lgit_isp_vt.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_hi553_lgit_isp_vt.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_hi553_lgit_postproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_hi553_lgit_postproc.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_hi553_lgit_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_hi553_lgit_preview.so \
@@ -903,15 +501,21 @@ PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_hi553_lgit_zsl_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_hi553_lgit_zsl_video.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_imtech_4k_preview_bu64244gwz.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_imtech_4k_preview_bu64244gwz.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_imtech_4k_video_bu64244gwz.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_imtech_4k_video_bu64244gwz.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_imtech_binning_4k_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_imtech_binning_4k_3a.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_imtech_binning_video_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_imtech_binning_video_3a.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_imtech_binning_zsl_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_imtech_binning_zsl_3a.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_imtech_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_imtech_common.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_imtech_cpp_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_imtech_cpp_hfr_120.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_imtech_cpp_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_imtech_cpp_hfr_60.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_imtech_cpp_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_imtech_cpp_liveshot.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_imtech_cpp_nzsl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_imtech_cpp_nzsl.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_imtech_cpp_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_imtech_cpp_preview.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_imtech_cpp_preview_binning.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_imtech_cpp_preview_binning.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_imtech_cpp_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_imtech_cpp_snapshot.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_imtech_cpp_snapshot_binning.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_imtech_cpp_snapshot_binning.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_imtech_cpp_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_imtech_cpp_video.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_imtech_cpp_video_4k.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_imtech_cpp_video_4k.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_imtech_cpp_video_binning.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_imtech_cpp_video_binning.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_imtech_default_preview_bu64244gwz.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_imtech_default_preview_bu64244gwz.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_imtech_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_imtech_default_video.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_imtech_default_video_bu64244gwz.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_imtech_default_video_bu64244gwz.so \
@@ -930,20 +534,28 @@ PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_imtech_postproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_imtech_postproc.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_imtech_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_imtech_preview.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_imtech_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_imtech_snapshot.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_imtech_snapshot_binning.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_imtech_snapshot_binning.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_imtech_video_4k.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_imtech_video_4k.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_imtech_video_binning.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_imtech_video_binning.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_imtech_zsl_preview_bu64244gwz.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_imtech_zsl_preview_bu64244gwz.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_imtech_zsl_video_bu64244gwz.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_imtech_zsl_video_bu64244gwz.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_lgit_4k_preview_bu64244gwz.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_lgit_4k_preview_bu64244gwz.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_lgit_4k_video_bu64244gwz.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_lgit_4k_video_bu64244gwz.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_lgit_binning_4k_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_lgit_binning_4k_3a.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_lgit_binning_video_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_lgit_binning_video_3a.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_lgit_binning_zsl_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_lgit_binning_zsl_3a.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_lgit_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_lgit_common.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_lgit_cpp_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_lgit_cpp_hfr_120.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_lgit_cpp_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_lgit_cpp_hfr_60.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_lgit_cpp_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_lgit_cpp_liveshot.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_lgit_cpp_nzsl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_lgit_cpp_nzsl.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_lgit_cpp_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_lgit_cpp_preview.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_lgit_cpp_preview_binning.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_lgit_cpp_preview_binning.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_lgit_cpp_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_lgit_cpp_snapshot.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_lgit_cpp_snapshot_binning.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_lgit_cpp_snapshot_binning.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_lgit_cpp_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_lgit_cpp_video.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_lgit_cpp_video_4k.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_lgit_cpp_video_4k.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_lgit_cpp_video_binning.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_lgit_cpp_video_binning.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_lgit_default_preview_bu64244gwz.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_lgit_default_preview_bu64244gwz.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_lgit_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_lgit_default_video.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_lgit_default_video_bu64244gwz.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_lgit_default_video_bu64244gwz.so \
@@ -962,19 +574,27 @@ PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_lgit_postproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_lgit_postproc.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_lgit_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_lgit_preview.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_lgit_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_lgit_snapshot.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_lgit_snapshot_binning.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_lgit_snapshot_binning.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_lgit_video_4k.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_lgit_video_4k.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_lgit_video_binning.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_lgit_video_binning.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_lgit_zsl_preview_bu64244gwz.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_lgit_zsl_preview_bu64244gwz.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_lgit_zsl_video_bu64244gwz.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_lgit_zsl_video_bu64244gwz.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_imtech_4k_preview_bu64244gwz.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_imtech_4k_preview_bu64244gwz.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_imtech_4k_video_bu64244gwz.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_imtech_4k_video_bu64244gwz.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_imtech_binning_4k_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_imtech_binning_4k_3a.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_imtech_binning_video_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_imtech_binning_video_3a.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_imtech_binning_zsl_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_imtech_binning_zsl_3a.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_imtech_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_imtech_common.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_imtech_cpp_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_imtech_cpp_hfr_120.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_imtech_cpp_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_imtech_cpp_hfr_60.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_imtech_cpp_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_imtech_cpp_liveshot.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_imtech_cpp_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_imtech_cpp_preview.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_imtech_cpp_preview_binning.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_imtech_cpp_preview_binning.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_imtech_cpp_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_imtech_cpp_snapshot.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_imtech_cpp_snapshot_binning.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_imtech_cpp_snapshot_binning.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_imtech_cpp_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_imtech_cpp_video.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_imtech_cpp_video_4k.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_imtech_cpp_video_4k.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_imtech_cpp_video_binning.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_imtech_cpp_video_binning.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_imtech_default_preview_bu64244gwz.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_imtech_default_preview_bu64244gwz.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_imtech_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_imtech_default_video.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_imtech_default_video_bu64244gwz.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_imtech_default_video_bu64244gwz.so \
@@ -993,19 +613,27 @@ PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_imtech_postproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_imtech_postproc.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_imtech_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_imtech_preview.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_imtech_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_imtech_snapshot.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_imtech_snapshot_binning.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_imtech_snapshot_binning.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_imtech_video_4k.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_imtech_video_4k.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_imtech_video_binning.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_imtech_video_binning.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_imtech_zsl_preview_bu64244gwz.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_imtech_zsl_preview_bu64244gwz.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_imtech_zsl_video_bu64244gwz.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_imtech_zsl_video_bu64244gwz.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_lgit_4k_preview_bu64244gwz.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_lgit_4k_preview_bu64244gwz.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_lgit_4k_video_bu64244gwz.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_lgit_4k_video_bu64244gwz.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_lgit_binning_4k_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_lgit_binning_4k_3a.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_lgit_binning_video_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_lgit_binning_video_3a.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_lgit_binning_zsl_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_lgit_binning_zsl_3a.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_lgit_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_lgit_common.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_lgit_cpp_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_lgit_cpp_hfr_120.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_lgit_cpp_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_lgit_cpp_hfr_60.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_lgit_cpp_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_lgit_cpp_liveshot.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_lgit_cpp_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_lgit_cpp_preview.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_lgit_cpp_preview_binning.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_lgit_cpp_preview_binning.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_lgit_cpp_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_lgit_cpp_snapshot.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_lgit_cpp_snapshot_binning.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_lgit_cpp_snapshot_binning.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_lgit_cpp_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_lgit_cpp_video.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_lgit_cpp_video_4k.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_lgit_cpp_video_4k.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_lgit_cpp_video_binning.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_lgit_cpp_video_binning.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_lgit_default_preview_bu64244gwz.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_lgit_default_preview_bu64244gwz.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_lgit_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_lgit_default_video.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_lgit_default_video_bu64244gwz.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_lgit_default_video_bu64244gwz.so \
@@ -1024,7 +652,9 @@ PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_lgit_postproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_lgit_postproc.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_lgit_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_lgit_preview.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_lgit_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_lgit_snapshot.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_lgit_snapshot_binning.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_lgit_snapshot_binning.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_lgit_video_4k.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_lgit_video_4k.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_lgit_video_binning.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_lgit_video_binning.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_lgit_zsl_preview_bu64244gwz.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_lgit_zsl_preview_bu64244gwz.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_lgit_zsl_video_bu64244gwz.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_lgit_zsl_video_bu64244gwz.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_s5k3m3_1080p_preview_ad5816g.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m3_1080p_preview_ad5816g.so \
@@ -1046,47 +676,22 @@ PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_s5k3m3_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m3_snapshot.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_s5k3m3_zsl_preview_ad5816g.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m3_zsl_preview_ad5816g.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_s5k3m3_zsl_video_ad5816g.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m3_zsl_video_ad5816g.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_hi553_cowell_cpp_face_unlock.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_hi553_cowell_cpp_face_unlock.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_hi553_cowell_face_unlock.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_hi553_cowell_face_unlock.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_hi553_cowell_face_unlock_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_hi553_cowell_face_unlock_preview.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_hi553_lgit_cpp_face_unlock.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_hi553_lgit_cpp_face_unlock.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_hi553_lgit_face_unlock.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_hi553_lgit_face_unlock.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_hi553_lgit_face_unlock_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_hi553_lgit_face_unlock_preview.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_imtech_binning_4k_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_imtech_binning_4k_3a.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_imtech_binning_video_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_imtech_binning_video_3a.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_imtech_binning_zsl_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_imtech_binning_zsl_3a.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_imtech_cpp_preview_binning.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_imtech_cpp_preview_binning.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_imtech_cpp_snapshot_binning.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_imtech_cpp_snapshot_binning.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_imtech_cpp_video_binning.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_imtech_cpp_video_binning.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_imtech_snapshot_binning.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_imtech_snapshot_binning.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_imtech_video_binning.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_imtech_video_binning.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_lgit_binning_4k_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_lgit_binning_4k_3a.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_lgit_binning_video_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_lgit_binning_video_3a.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_lgit_binning_zsl_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_lgit_binning_zsl_3a.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_lgit_cpp_preview_binning.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_lgit_cpp_preview_binning.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_lgit_cpp_snapshot_binning.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_lgit_cpp_snapshot_binning.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_lgit_cpp_video_binning.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_lgit_cpp_video_binning.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_lgit_snapshot_binning.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_lgit_snapshot_binning.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_lgit_video_binning.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_lgit_video_binning.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_imtech_binning_4k_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_imtech_binning_4k_3a.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_imtech_binning_video_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_imtech_binning_video_3a.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_imtech_binning_zsl_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_imtech_binning_zsl_3a.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_imtech_cpp_preview_binning.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_imtech_cpp_preview_binning.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_imtech_cpp_snapshot_binning.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_imtech_cpp_snapshot_binning.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_imtech_cpp_video_binning.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_imtech_cpp_video_binning.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_imtech_snapshot_binning.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_imtech_snapshot_binning.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_imtech_video_binning.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_imtech_video_binning.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_lgit_binning_4k_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_lgit_binning_4k_3a.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_lgit_binning_video_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_lgit_binning_video_3a.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_lgit_binning_zsl_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_lgit_binning_zsl_3a.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_lgit_cpp_preview_binning.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_lgit_cpp_preview_binning.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_lgit_cpp_snapshot_binning.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_lgit_cpp_snapshot_binning.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_lgit_cpp_video_binning.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_lgit_cpp_video_binning.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_lgit_snapshot_binning.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_lgit_snapshot_binning.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libchromatix_imx258_mono_lgit_video_binning.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_lgit_video_binning.so \
-    vendor/lge/msm8996-common/proprietary/lib/libdovi.so:system/lib/libdovi.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libcppf.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcppf.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libcsd-client.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcsd-client.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libdiag.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdiag.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libdsi_netctrl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdsi_netctrl.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libdsutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdsutils.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libdts-eagle-shared.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdts-eagle-shared.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libeaglecore.so:$(TARGET_COPY_OUT_VENDOR)/lib/libeaglecore.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libfastcvadsp_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib/libfastcvadsp_stub.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libfastcvopt.so:$(TARGET_COPY_OUT_VENDOR)/lib/libfastcvopt.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libfilm_emulation.so:$(TARGET_COPY_OUT_VENDOR)/lib/libfilm_emulation.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libflash_pmic.so:$(TARGET_COPY_OUT_VENDOR)/lib/libflash_pmic.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libgsl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgsl.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libhdr_tm.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhdr_tm.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libhdr_tm.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhdr_tm.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libhwdaphal.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhwdaphal.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libidl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libidl.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libiris_lc898123f40.so:$(TARGET_COPY_OUT_VENDOR)/lib/libiris_lc898123f40.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libjpegdhw.so:$(TARGET_COPY_OUT_VENDOR)/lib/libjpegdhw.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libjpegdmahw.so:$(TARGET_COPY_OUT_VENDOR)/lib/libjpegdmahw.so \
@@ -1103,6 +708,18 @@ PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_ae_parameter_4k_video_imx258_lgit.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_ae_parameter_4k_video_imx258_lgit.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_ae_parameter_4k_video_imx258_wide_imtech.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_ae_parameter_4k_video_imx258_wide_imtech.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_ae_parameter_4k_video_imx258_wide_lgit.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_ae_parameter_4k_video_imx258_wide_lgit.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_ae_parameter_binning_4k_imx258_imtech.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_ae_parameter_binning_4k_imx258_imtech.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_ae_parameter_binning_4k_imx258_lgit.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_ae_parameter_binning_4k_imx258_lgit.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_ae_parameter_binning_4k_imx258_wide_imtech.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_ae_parameter_binning_4k_imx258_wide_imtech.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_ae_parameter_binning_4k_imx258_wide_lgit.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_ae_parameter_binning_4k_imx258_wide_lgit.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_ae_parameter_binning_video_imx258_imtech.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_ae_parameter_binning_video_imx258_imtech.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_ae_parameter_binning_video_imx258_lgit.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_ae_parameter_binning_video_imx258_lgit.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_ae_parameter_binning_video_imx258_wide_imtech.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_ae_parameter_binning_video_imx258_wide_imtech.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_ae_parameter_binning_video_imx258_wide_lgit.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_ae_parameter_binning_video_imx258_wide_lgit.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_ae_parameter_binning_zsl_imx258_imtech.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_ae_parameter_binning_zsl_imx258_imtech.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_ae_parameter_binning_zsl_imx258_lgit.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_ae_parameter_binning_zsl_imx258_lgit.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_ae_parameter_binning_zsl_imx258_wide_imtech.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_ae_parameter_binning_zsl_imx258_wide_imtech.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_ae_parameter_binning_zsl_imx258_wide_lgit.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_ae_parameter_binning_zsl_imx258_wide_lgit.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_ae_parameter_default_preview_hi553_cowell.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_ae_parameter_default_preview_hi553_cowell.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_ae_parameter_default_preview_hi553_lgit.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_ae_parameter_default_preview_hi553_lgit.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_ae_parameter_default_preview_imx258_imtech.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_ae_parameter_default_preview_imx258_imtech.so \
@@ -1182,8 +799,12 @@ PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_hi553_lgit_panorama.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_hi553_lgit_panorama.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_hi553_lgit_raw_hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_hi553_lgit_raw_hdr.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_hi553_lgit_zsl_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_hi553_lgit_zsl_preview.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_hi553_lgit_zsl_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_hi553_lgit_zsl_video.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_imx258_imtech_4k_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_imx258_imtech_4k_preview.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_imx258_imtech_4k_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_imx258_imtech_4k_video.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_imx258_imtech_binning_4k.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_imx258_imtech_binning_4k.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_imx258_imtech_binning_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_imx258_imtech_binning_video.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_imx258_imtech_binning_zsl.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_imx258_imtech_binning_zsl.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_imx258_imtech_default_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_imx258_imtech_default_preview.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_imx258_imtech_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_imx258_imtech_default_video.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_imx258_imtech_hdr_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_imx258_imtech_hdr_snapshot.so \
@@ -1197,6 +818,9 @@ PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_imx258_imtech_zsl_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_imx258_imtech_zsl_video.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_imx258_lgit_4k_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_imx258_lgit_4k_preview.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_imx258_lgit_4k_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_imx258_lgit_4k_video.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_imx258_lgit_binning_4k.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_imx258_lgit_binning_4k.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_imx258_lgit_binning_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_imx258_lgit_binning_video.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_imx258_lgit_binning_zsl.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_imx258_lgit_binning_zsl.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_imx258_lgit_default_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_imx258_lgit_default_preview.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_imx258_lgit_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_imx258_lgit_default_video.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_imx258_lgit_hdr_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_imx258_lgit_hdr_snapshot.so \
@@ -1210,6 +834,9 @@ PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_imx258_lgit_zsl_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_imx258_lgit_zsl_video.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_imx258_wide_imtech_4k_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_imx258_wide_imtech_4k_preview.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_imx258_wide_imtech_4k_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_imx258_wide_imtech_4k_video.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_imx258_wide_imtech_binning_4k.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_imx258_wide_imtech_binning_4k.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_imx258_wide_imtech_binning_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_imx258_wide_imtech_binning_video.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_imx258_wide_imtech_binning_zsl.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_imx258_wide_imtech_binning_zsl.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_imx258_wide_imtech_default_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_imx258_wide_imtech_default_preview.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_imx258_wide_imtech_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_imx258_wide_imtech_default_video.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_imx258_wide_imtech_hdr_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_imx258_wide_imtech_hdr_snapshot.so \
@@ -1223,6 +850,9 @@ PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_imx258_wide_imtech_zsl_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_imx258_wide_imtech_zsl_video.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_imx258_wide_lgit_4k_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_imx258_wide_lgit_4k_preview.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_imx258_wide_lgit_4k_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_imx258_wide_lgit_4k_video.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_imx258_wide_lgit_binning_4k.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_imx258_wide_lgit_binning_4k.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_imx258_wide_lgit_binning_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_imx258_wide_lgit_binning_video.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_imx258_wide_lgit_binning_zsl.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_imx258_wide_lgit_binning_zsl.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_imx258_wide_lgit_default_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_imx258_wide_lgit_default_preview.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_imx258_wide_lgit_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_imx258_wide_lgit_default_video.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_imx258_wide_lgit_hdr_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_imx258_wide_lgit_hdr_snapshot.so \
@@ -1234,34 +864,16 @@ PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_imx258_wide_lgit_raw_hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_imx258_wide_lgit_raw_hdr.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_imx258_wide_lgit_zsl_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_imx258_wide_lgit_zsl_preview.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_imx258_wide_lgit_zsl_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_imx258_wide_lgit_zsl_video.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_ae_parameter_binning_4k_imx258_imtech.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_ae_parameter_binning_4k_imx258_imtech.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_ae_parameter_binning_4k_imx258_lgit.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_ae_parameter_binning_4k_imx258_lgit.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_ae_parameter_binning_4k_imx258_wide_imtech.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_ae_parameter_binning_4k_imx258_wide_imtech.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_ae_parameter_binning_4k_imx258_wide_lgit.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_ae_parameter_binning_4k_imx258_wide_lgit.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_ae_parameter_binning_video_imx258_imtech.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_ae_parameter_binning_video_imx258_imtech.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_ae_parameter_binning_video_imx258_lgit.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_ae_parameter_binning_video_imx258_lgit.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_ae_parameter_binning_video_imx258_wide_imtech.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_ae_parameter_binning_video_imx258_wide_imtech.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_ae_parameter_binning_video_imx258_wide_lgit.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_ae_parameter_binning_video_imx258_wide_lgit.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_ae_parameter_binning_zsl_imx258_imtech.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_ae_parameter_binning_zsl_imx258_imtech.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_ae_parameter_binning_zsl_imx258_lgit.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_ae_parameter_binning_zsl_imx258_lgit.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_ae_parameter_binning_zsl_imx258_wide_imtech.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_ae_parameter_binning_zsl_imx258_wide_imtech.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_ae_parameter_binning_zsl_imx258_wide_lgit.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_ae_parameter_binning_zsl_imx258_wide_lgit.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_imx258_imtech_binning_4k.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_imx258_imtech_binning_4k.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_imx258_imtech_binning_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_imx258_imtech_binning_video.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_imx258_imtech_binning_zsl.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_imx258_imtech_binning_zsl.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_imx258_lgit_binning_4k.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_imx258_lgit_binning_4k.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_imx258_lgit_binning_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_imx258_lgit_binning_video.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_imx258_lgit_binning_zsl.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_imx258_lgit_binning_zsl.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_imx258_wide_imtech_binning_4k.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_imx258_wide_imtech_binning_4k.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_imx258_wide_imtech_binning_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_imx258_wide_imtech_binning_video.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_imx258_wide_imtech_binning_zsl.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_imx258_wide_imtech_binning_zsl.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_imx258_wide_lgit_binning_4k.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_imx258_wide_lgit_binning_4k.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_imx258_wide_lgit_binning_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_imx258_wide_lgit_binning_video.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/liblg_awb_parameter_imx258_wide_lgit_binning_zsl.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblg_awb_parameter_imx258_wide_lgit_binning_zsl.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/liblgae_main.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblgae_main.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/liblgawb_main.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblgawb_main.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/liblghdri.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblghdri.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/liblgmda.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblgmda.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libllvm-glnext.so:$(TARGET_COPY_OUT_VENDOR)/lib/libllvm-glnext.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libllvm-qcom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libllvm-qcom.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libmdmdetect.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmdmdetect.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libmdsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmdsprpc.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libmm-color-convertor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmm-color-convertor.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libmm-hdcpmgr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmm-hdcpmgr.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libmm-qcamera.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmm-qcamera.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libmmcamera2_c2d_module.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera2_c2d_module.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libmmcamera2_cpp_module.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera2_cpp_module.so \
@@ -1275,11 +887,11 @@ PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libmmcamera2_pp_buf_mgr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera2_pp_buf_mgr.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libmmcamera2_pproc_modules.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera2_pproc_modules.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libmmcamera2_q3a_core.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera2_q3a_core.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libmmcamera2_q3a_core.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera2_q3a_core.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libmmcamera2_sensor_modules.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera2_sensor_modules.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libmmcamera2_stats_algorithm.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera2_stats_algorithm.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libmmcamera2_stats_modules.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera2_stats_modules.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libmmcamera_brcf016gwz_hi553_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_brcf016gwz_hi553_eeprom.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libmmcamera_chromaflash_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_chromaflash_lib.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libmmcamera_dbg.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_dbg.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libmmcamera_dummyalgo.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_dummyalgo.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libmmcamera_eebinparse.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_eebinparse.so \
@@ -1357,101 +969,389 @@ PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libmmcamera_thread_services.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_thread_services.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libmmcamera_tintless_algo.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_tintless_algo.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libmmcamera_tintless_bg_pca_algo.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_tintless_bg_pca_algo.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libmmcamera_trueportrait_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_trueportrait_lib.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libmmcamera_tuning.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_tuning.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libmmcamera_tuning_lookup.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_tuning_lookup.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libmmi.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmi.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libmmi_jni.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmi_jni.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libmmjpeg.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmjpeg.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libmmjpeg_interface.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmjpeg_interface.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libmmosal_proprietary.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmosal_proprietary.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libmmqjpeg_codec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmqjpeg_codec.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libmmqjpegdma.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmqjpegdma.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libmorpho_image_stab31.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmorpho_image_stab31.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libmorpho_superzoom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmorpho_superzoom.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libmpbase.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmpbase.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/liboemcrypto.so:$(TARGET_COPY_OUT_VENDOR)/lib/liboemcrypto.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libois_bu24333gwl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libois_bu24333gwl.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libois_lc898122.so:$(TARGET_COPY_OUT_VENDOR)/lib/libois_lc898122.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libperfconfig.so:$(TARGET_COPY_OUT_VENDOR)/lib/libperfconfig.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libperfgluelayer.so:$(TARGET_COPY_OUT_VENDOR)/lib/libperfgluelayer.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libperipheral_client.so:$(TARGET_COPY_OUT_VENDOR)/lib/libperipheral_client.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libqcci_legacy.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqcci_legacy.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libqdi.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqdi.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libqdp.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqdp.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libqisl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqisl.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libqmi.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqmi.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libqmi_cci.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqmi_cci.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libqmi_client_helper.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqmi_client_helper.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libqmi_client_qmux.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqmi_client_qmux.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libqmi_common_so.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqmi_common_so.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libqmi_csi.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqmi_csi.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libqmi_encdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqmi_encdec.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libqmiservices.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqmiservices.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libqomx_core.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqomx_core.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libqomx_jpegdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqomx_jpegdec.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libqomx_jpegenc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqomx_jpegenc.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libqomx_jpegenc_pipe.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqomx_jpegenc_pipe.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libqti-perfd-client.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqti-perfd-client.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libqti-perfd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqti-perfd.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libqti-util.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqti-util.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libqtigef.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqtigef.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libremosaic_daemon.so:$(TARGET_COPY_OUT_VENDOR)/lib/libremosaic_daemon.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/librpmb.so:$(TARGET_COPY_OUT_VENDOR)/lib/librpmb.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/librs_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib/librs_adreno.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/librs_adreno_sha1.so:$(TARGET_COPY_OUT_VENDOR)/lib/librs_adreno_sha1.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libscalar.so:$(TARGET_COPY_OUT_VENDOR)/lib/libscalar.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libsdm-color.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsdm-color.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libsdm-diag.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsdm-diag.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libsdmextension.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsdmextension.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libsdsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsdsprpc.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libsensor1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsensor1.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libsensor_lge_cal.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsensor_lge_cal.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libsensor_reg.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsensor_reg.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libsmemlog.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsmemlog.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libsmwrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsmwrapper.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libssd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libssd.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libsymphony-1.1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsymphony-1.1.1.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libsymphony-1.1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsymphony-1.1.2.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libsymphony-1.1.4.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsymphony-1.1.4.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libsymphonypower-1.1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsymphonypower-1.1.1.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libsymphonypower-1.1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsymphonypower-1.1.2.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libsymphonypower-1.1.4.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsymphonypower-1.1.4.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libtime_genoff.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtime_genoff.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libtinycompress_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtinycompress_vendor.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libtinyxml2_1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtinyxml2_1.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libvideoutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvideoutils.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libvqzip.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvqzip.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libwfdcommonutils_proprietary.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfdcommonutils_proprietary.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libwfdhaldsmanager.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfdhaldsmanager.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libwfdhdcpcp.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfdhdcpcp.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libwfdmmservice.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfdmmservice.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libwfdmodulehdcpsession.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfdmodulehdcpsession.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libwvhidl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwvhidl.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/rfsa/adsp/AlacDecoderModule.so.1:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/AlacDecoderModule.so.1 \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/rfsa/adsp/ApeDecoderModule.so.1:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/ApeDecoderModule.so.1 \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/rfsa/adsp/AudioSphereModule.so.1:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/AudioSphereModule.so.1 \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/rfsa/adsp/DTS_HPX_MODULE.so.1:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/DTS_HPX_MODULE.so.1 \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/rfsa/adsp/DolbyMobileModule.so.1:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/DolbyMobileModule.so.1 \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/rfsa/adsp/DolbySurroundModule.so.1:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/DolbySurroundModule.so.1 \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/rfsa/adsp/EtsiEaacPlusEncAndCmnModule.so.1:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/EtsiEaacPlusEncAndCmnModule.so.1 \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/rfsa/adsp/HeaacDecoderModule.so.1:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/HeaacDecoderModule.so.1 \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/rfsa/adsp/SAPlusCmnModule.so.1:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/SAPlusCmnModule.so.1 \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/rfsa/adsp/SrsTruMediaModule.so.1:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/SrsTruMediaModule.so.1 \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/rfsa/adsp/VorbisDecoderModule.so.1:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/VorbisDecoderModule.so.1 \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/rfsa/adsp/WmaProDecoderModule.so.1:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/WmaProDecoderModule.so.1 \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/rfsa/adsp/WmaStdDecoderModule.so.1:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/WmaStdDecoderModule.so.1 \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/rfsa/adsp/fastrpc_shell_0:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/fastrpc_shell_0 \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/rfsa/adsp/fluence_voiceplus_module.so.1:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/fluence_voiceplus_module.so.1 \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/rfsa/adsp/libfastcvadsp.so:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/libfastcvadsp.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/rfsa/adsp/libscveObjectSegmentation_skel.so:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/libscveObjectSegmentation_skel.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/rfsa/adsp/libsysmon_skel.so:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/libsysmon_skel.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/rfsa/adsp/mmecns_module.so.1:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/mmecns_module.so.1 \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/sensor_calibrate.so:$(TARGET_COPY_OUT_VENDOR)/lib/sensor_calibrate.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/sensors.ssc.so:$(TARGET_COPY_OUT_VENDOR)/lib/sensors.ssc.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/soundfx/libasphere.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libasphere.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/soundfx/libaudiopreprocessing.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libaudiopreprocessing.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/soundfx/libbundlewrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libbundlewrapper.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/soundfx/libdownmix.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libdownmix.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/soundfx/libdynproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libdynproc.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/soundfx/libeagle.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libeagle.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/soundfx/libeffectproxy.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libeffectproxy.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/soundfx/libldnhncr.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libldnhncr.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/soundfx/liblgeffectwrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/liblgeffectwrapper.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/soundfx/libqcbassboost.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libqcbassboost.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/soundfx/libqcompostprocbundle.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libqcompostprocbundle.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/soundfx/libqcomvisualizer.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libqcomvisualizer.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/soundfx/libqcomvoiceprocessing.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libqcomvoiceprocessing.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/soundfx/libqcreverb.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libqcreverb.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/soundfx/libqcvirt.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libqcvirt.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/soundfx/libreverbwrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libreverbwrapper.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/soundfx/libvisualizer.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libvisualizer.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/soundfx/libvolumelistener.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libvolumelistener.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/vendor.display.color@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.display.color@1.0.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/vendor.display.color@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.display.color@1.1.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/vendor.display.color@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.display.color@1.2.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/vendor.display.postproc@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.display.postproc@1.0.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/vendor.qti.hardware.fingerprint@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.fingerprint@1.0.so \
-    vendor/lge/msm8996-common/proprietary/lib64/libdovi.so:system/lib64/libdovi.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/vendor.qti.hardware.perf@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.perf@1.0.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/vendor.qti.hardware.perf@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.perf@2.0.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/vendor.qti.hardware.qdutils_disp@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.qdutils_disp@1.0.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/vendor.qti.hardware.tui_comm@1.0_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.tui_comm@1.0_vendor.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/vendor.qti.voiceprint@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.voiceprint@1.0.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.qualcomm.qti.dpm.api@1.0.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/com.qualcomm.qti.imscmservice@1.0_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.qualcomm.qti.imscmservice@1.0_vendor.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/egl/eglSubDriverAndroid.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/eglSubDriverAndroid.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/egl/libEGL_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/libEGL_adreno.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/egl/libGLESv1_CM_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/libGLESv1_CM_adreno.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/egl/libGLESv2_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/libGLESv2_adreno.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/egl/libQTapGLES.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/libQTapGLES.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/egl/libq3dtools_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/libq3dtools_adreno.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/hw/activity_recognition.msm8996.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/activity_recognition.msm8996.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/hw/fingerprint.msm8996.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/fingerprint.msm8996.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/hw/gatekeeper.msm8996.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/gatekeeper.msm8996.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/hw/keystore.msm8996.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/keystore.msm8996.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/hw/sensors.vr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/sensors.vr.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/hw/sound_trigger.primary.msm8996.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/sound_trigger.primary.msm8996.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/hw/vendor.lge.hardware.bootproperty@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.lge.hardware.bootproperty@1.0-impl.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/hw/vendor.lge.hardware.property@1.2-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.lge.hardware.property@1.2-impl.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/hw/vendor.lge.hardware.sysnode@1.0-client.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.lge.hardware.sysnode@1.0-client.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/hw/vendor.lge.hardware.sysnode@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.lge.hardware.sysnode@1.0-impl.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/hw/vendor.qti.gnss@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.gnss@1.0-impl.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/hw/vulkan.msm8996.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vulkan.msm8996.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/lib-dplmedia.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-dplmedia.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/lib-imsSDP.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-imsSDP.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/lib-imscmservice.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-imscmservice.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/lib-imsdpl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-imsdpl.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/lib-imsqimf.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-imsqimf.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/lib-imsxml.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-imsxml.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/lib-rtpcommon.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-rtpcommon.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/lib-rtpcore.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-rtpcore.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/lib-rtpdaemoninterface.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-rtpdaemoninterface.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/lib-rtpsl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-rtpsl.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/lib-sec-disp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-sec-disp.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/lib-uceservice.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-uceservice.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libC2D2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libC2D2.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libCB.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCB.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libDRPlugin.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libDRPlugin.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libGPreqcancel.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libGPreqcancel.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libGPreqcancel_svc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libGPreqcancel_svc.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libOpenCL.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libOpenCL.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libQSEEComAPI.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libQSEEComAPI.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libRSDriver_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libRSDriver_adreno.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libSecureUILib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libSecureUILib.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libStDrvInt.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libStDrvInt.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libacdbloader.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libacdbloader.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libacdbrtac.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libacdbrtac.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libadiertac.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libadiertac.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libadreno_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libadreno_utils.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libadsp_default_listener.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libadsp_default_listener.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libadsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libadsprpc.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libalarmservice_jni.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libalarmservice_jni.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libaudcal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaudcal.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libaudio_log_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaudio_log_utils.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libaudioalsa.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaudioalsa.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libbase-hax.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbase-hax.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libbccQTI.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbccQTI.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libc2d30_bltlib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libc2d30_bltlib.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libcdsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcdsprpc.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libcne.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcne.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libcne.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcne.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libcneapiclient.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcneapiclient.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libcneapiclient.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcneapiclient.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libcneoplookup.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcneoplookup.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libcneqmiutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcneqmiutils.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libconfigdb.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libconfigdb.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libcsd-client.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcsd-client.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libdataitems.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdataitems.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libdiag.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdiag.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libdisp-aba.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdisp-aba.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libdpmqmihal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdpmqmihal.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libdrmfs.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdrmfs.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libdrmtime.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdrmtime.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libdrplugin_client.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdrplugin_client.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libdsi_netctrl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdsi_netctrl.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libdsutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdsutils.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libdts-eagle-shared.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdts-eagle-shared.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libeaglecore.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libeaglecore.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libevent_observer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libevent_observer.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libfastcvadsp_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfastcvadsp_stub.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libfastcvopt.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfastcvopt.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libflp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libflp.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libgdtap.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgdtap.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libgeofence.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgeofence.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libgsl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgsl.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libhdr_tm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhdr_tm.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libhdr_tm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhdr_tm.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libhui.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhui.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libidl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libidl.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libizat_client_api.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libizat_client_api.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libizat_core.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libizat_core.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/liblbs_core.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblbs_core.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libllvm-glnext.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libllvm-glnext.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libllvm-qcom.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libllvm-qcom.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libloc_api_v02.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libloc_api_v02.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libloc_ds_api.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libloc_ds_api.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/liblocationservice.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblocationservice.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/liblocationservice_glue.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblocationservice_glue.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/liblowi_client.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblowi_client.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/liblowi_wifihal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblowi_wifihal.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/liblqe.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblqe.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libmdmdetect.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmdmdetect.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libmdsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmdsprpc.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libmm-hdcpmgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmm-hdcpmgr.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libmmcamera2_frame_algorithm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera2_frame_algorithm.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libmmcamera2_is.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera2_is.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libmmcamera2_q3a_core.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera2_q3a_core.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libmmcamera2_stats_algorithm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera2_stats_algorithm.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libmmcamera_dbg.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera_dbg.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libmmcamera_tintless_algo.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera_tintless_algo.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libmmcamera_tintless_bg_pca_algo.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera_tintless_bg_pca_algo.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libmmi.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmi.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libmmi_jni.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmi_jni.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libmmosal_proprietary.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmosal_proprietary.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libnetmgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnetmgr.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libpdmapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpdmapper.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libperfconfig.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libperfconfig.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libperfgluelayer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libperfgluelayer.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libperipheral_client.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libperipheral_client.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libqcci_legacy.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqcci_legacy.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libqcmaputils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqcmaputils.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libqdi.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqdi.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libqdp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqdp.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libqisl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqisl.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libqmi.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqmi.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libqmi_cci.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqmi_cci.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libqmi_client_helper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqmi_client_helper.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libqmi_client_qmux.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqmi_client_qmux.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libqmi_common_so.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqmi_common_so.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libqmi_csi.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqmi_csi.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libqmi_encdec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqmi_encdec.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libqmiservices.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqmiservices.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libqrtr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqrtr.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libqsocket.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqsocket.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libqti-perfd-client.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqti-perfd-client.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libqti-perfd.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqti-perfd.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libqti-util.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqti-util.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libril-qc-ltedirectdisc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libril-qc-ltedirectdisc.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libril-qc-qmi-1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libril-qc-qmi-1.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libril-qc-radioconfig.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libril-qc-radioconfig.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libril-qcril-hook-oem.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libril-qcril-hook-oem.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/librilqmiservices.so:$(TARGET_COPY_OUT_VENDOR)/lib64/librilqmiservices.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/librpmb.so:$(TARGET_COPY_OUT_VENDOR)/lib64/librpmb.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/librs_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib64/librs_adreno.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/librs_adreno_sha1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/librs_adreno_sha1.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libscalar.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libscalar.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libsdm-color.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsdm-color.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libsdm-diag.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsdm-diag.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libsdmextension.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsdmextension.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libsdsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsdsprpc.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libsecureui.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsecureui.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libsecureui_svcsock.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsecureui_svcsock.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libsensor1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsensor1.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libsensor_lge_cal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsensor_lge_cal.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libsensor_reg.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsensor_reg.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libsensorndkbridge.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsensorndkbridge.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libsettings.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsettings.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libslimclient.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libslimclient.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libsmemlog.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsmemlog.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libssd.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libssd.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libsymphony-1.1.4.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsymphony-1.1.4.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libsymphonypower-1.1.4.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsymphonypower-1.1.4.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libsystem_health_mon.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsystem_health_mon.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libthermalfeature.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libthermalfeature.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libthermalioctl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libthermalioctl.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libtime_genoff.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtime_genoff.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libtinycompress_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtinycompress_vendor.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libtinyxml2_1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtinyxml2_1.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libulp2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libulp2.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libux.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libux.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libvideoutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvideoutils.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libwms.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwms.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libwms.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwms.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libwqe.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwqe.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libwqe.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwqe.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libxml.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libxml.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libxml.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libxml.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libxtadapter.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libxtadapter.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libxtwifi_ulp_adaptor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libxtwifi_ulp_adaptor.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/sensor_calibrate.so:$(TARGET_COPY_OUT_VENDOR)/lib64/sensor_calibrate.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/sensors.ssc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/sensors.ssc.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/soundfx/libasphere.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libasphere.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/soundfx/libaudiopreprocessing.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libaudiopreprocessing.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/soundfx/libbundlewrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libbundlewrapper.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/soundfx/libdownmix.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libdownmix.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/soundfx/libdynproc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libdynproc.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/soundfx/libeagle.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libeagle.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/soundfx/libeffectproxy.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libeffectproxy.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/soundfx/libldnhncr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libldnhncr.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/soundfx/liblgeffectwrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/liblgeffectwrapper.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/soundfx/libqcbassboost.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libqcbassboost.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/soundfx/libqcompostprocbundle.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libqcompostprocbundle.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/soundfx/libqcomvisualizer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libqcomvisualizer.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/soundfx/libqcomvoiceprocessing.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libqcomvoiceprocessing.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/soundfx/libqcvirt.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libqcvirt.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/soundfx/libreverbwrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libreverbwrapper.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/soundfx/libvisualizer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libvisualizer.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/soundfx/libvolumelistener.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libvolumelistener.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.display.color@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.color@1.0.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.display.color@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.color@1.1.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.display.color@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.color@1.2.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.display.postproc@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.postproc@1.0.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.data.factory@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.data.factory@2.0.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.data.factory@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.data.factory@2.0.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.gnss@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.gnss@1.0.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.gnss@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.gnss@1.1.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.gnss@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.gnss@1.2.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.gnss@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.gnss@2.0.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.data.cne.internal.api@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.cne.internal.api@1.0.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.data.cne.internal.api@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.cne.internal.api@1.0.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.data.cne.internal.constants@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.cne.internal.constants@1.0.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.data.cne.internal.constants@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.cne.internal.constants@1.0.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.data.cne.internal.server@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.cne.internal.server@1.0.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.data.cne.internal.server@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.cne.internal.server@1.0.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.data.connection@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.connection@1.0.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.data.connection@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.connection@1.0.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.data.connection@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.connection@1.1.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.data.connection@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.connection@1.1.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.data.iwlan@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.iwlan@1.0.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.data.iwlan@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.iwlan@1.0.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.data.latency@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.latency@1.0.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.data.latency@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.latency@1.0.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.data.qmi@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.qmi@1.0.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.data.qmi@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.qmi@1.0.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.fingerprint@1.0.so \
-    vendor/lge/msm8996-common/proprietary/vendor/framework/vendor.qti.hardware.fingerprint-V1.0-java.jar:$(TARGET_COPY_OUT_VENDOR)/framework/vendor.qti.hardware.fingerprint-V1.0-java.jar \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libhdr_tm.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhdr_tm.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libhdr_tm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhdr_tm.so
-
-# LGE - Bootproperty
-PRODUCT_COPY_FILES += \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/init/init.lge.bootproperty_trigger.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.lge.bootproperty_trigger.rc \
-    vendor/lge/msm8996-common/proprietary/lib/vendor.lge.hardware.bootproperty@1.0.so:system/lib/vendor.lge.hardware.bootproperty@1.0.so \
-    vendor/lge/msm8996-common/proprietary/lib64/vendor.lge.hardware.bootproperty@1.0.so:system/lib64/vendor.lge.hardware.bootproperty@1.0.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/hw/vendor.lge.hardware.bootproperty@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.lge.hardware.bootproperty@1.0-impl.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/hw/vendor.lge.hardware.bootproperty@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.lge.hardware.bootproperty@1.0-impl.so \
-    vendor/lge/msm8996-common/proprietary/vendor/bin/hw/vendor.lge.hardware.bootproperty@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.lge.hardware.bootproperty@1.0-service \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/init/vendor.lge.hardware.bootproperty@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.lge.hardware.bootproperty@1.0-service.rc \
-    vendor/lge/msm8996-common/proprietary/framework/vendor.lge.hardware.bootproperty-V1.0-java.jar:system/framework/vendor.lge.hardware.bootproperty-V1.0-java.jar \
-
-# LGE - Configstore
-PRODUCT_COPY_FILES += \
-    vendor/lge/msm8996-common/proprietary/framework/vendor.lge.hardware.configstore-V1.0-java.jar:system/framework/vendor.lge.hardware.configstore-V1.0-java.jar \
-    vendor/lge/msm8996-common/proprietary/lib/vendor.lge.hardware.configstore@1.0.so:system/lib/vendor.lge.hardware.configstore@1.0.so \
-    vendor/lge/msm8996-common/proprietary/lib64/vendor.lge.hardware.configstore@1.0.so:system/lib64/vendor.lge.hardware.configstore@1.0.so \
-    vendor/lge/msm8996-common/proprietary/vendor/bin/hw/vendor.lge.hardware.configstore@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.lge.hardware.configstore@1.0-service \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/init/vendor.lge.hardware.configstore@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.lge.hardware.configstore@1.0-service.rc \
-
-# LGE - Platform
-PRODUCT_COPY_FILES += \
-    vendor/lge/msm8996-common/proprietary/framework/vendor.lge.hardware.platform-V1.0-java.jar:system/framework/vendor.lge.hardware.platform-V1.0-java.jar \
-    vendor/lge/msm8996-common/proprietary/framework/vendor.lge.hardware.platform-V1.1-java.jar:system/framework/vendor.lge.hardware.platform-V1.1-java.jar \
-    vendor/lge/msm8996-common/proprietary/lib/vendor.lge.hardware.platform@1.0.so:system/lib/vendor.lge.hardware.platform@1.0.so \
-    vendor/lge/msm8996-common/proprietary/lib/vendor.lge.hardware.platform@1.1.so:system/lib/vendor.lge.hardware.platform@1.1.so \
-    vendor/lge/msm8996-common/proprietary/lib64/vendor.lge.hardware.platform@1.0.so:system/lib64/vendor.lge.hardware.platform@1.0.so \
-    vendor/lge/msm8996-common/proprietary/lib64/vendor.lge.hardware.platform@1.1.so:system/lib64/vendor.lge.hardware.platform@1.1.so \
-    vendor/lge/msm8996-common/proprietary/vendor/bin/hw/vendor.lge.hardware.platform@1.1-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.lge.hardware.platform@1.1-service \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/init/vendor.lge.hardware.platform@1.1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.lge.hardware.platform@1.1-service.rc \
-
-# LGE - Property
-PRODUCT_COPY_FILES += \
-    vendor/lge/msm8996-common/proprietary/framework/vendor.lge.hardware.property-V1.0-java.jar:system/framework/vendor.lge.hardware.property-V1.0-java.jar \
-    vendor/lge/msm8996-common/proprietary/framework/vendor.lge.hardware.property-V1.1-java.jar:system/framework/vendor.lge.hardware.property-V1.1-java.jar \
-    vendor/lge/msm8996-common/proprietary/framework/vendor.lge.hardware.property-V1.2-java.jar:system/framework/vendor.lge.hardware.property-V1.2-java.jar \
-    vendor/lge/msm8996-common/proprietary/vendor/bin/hw/vendor.lge.hardware.property@1.2-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.lge.hardware.property@1.2-service \
-    vendor/lge/msm8996-common/proprietary/vendor/etc/init/vendor.lge.hardware.property@1.2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.lge.hardware.property@1.2-service.rc \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/hw/vendor.lge.hardware.property@1.2-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.lge.hardware.property@1.2-impl.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/hw/vendor.lge.hardware.property@1.2-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.lge.hardware.property@1.2-impl.so \
-    vendor/lge/msm8996-common/proprietary/lib/vendor.lge.hardware.property@1.0.so:system/lib/vendor.lge.hardware.property@1.0.so \
-    vendor/lge/msm8996-common/proprietary/lib/vendor.lge.hardware.property@1.1.so:system/lib/vendor.lge.hardware.property@1.1.so \
-    vendor/lge/msm8996-common/proprietary/lib/vendor.lge.hardware.property@1.2.so:system/lib/vendor.lge.hardware.property@1.2.so \
-    vendor/lge/msm8996-common/proprietary/lib64/vendor.lge.hardware.property@1.0.so:system/lib64/vendor.lge.hardware.property@1.0.so \
-    vendor/lge/msm8996-common/proprietary/lib64/vendor.lge.hardware.property@1.1.so:system/lib64/vendor.lge.hardware.property@1.1.so \
-    vendor/lge/msm8996-common/proprietary/lib64/vendor.lge.hardware.property@1.2.so:system/lib64/vendor.lge.hardware.property@1.2.so
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.perf@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.perf@1.0.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.perf@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.perf@2.0.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.qdutils_disp@1.0.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.radio.am@1.0_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.am@1.0_vendor.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.radio.atcmdfwd@1.0_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.atcmdfwd@1.0_vendor.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.radio.ims@1.0_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.ims@1.0_vendor.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.radio.lpa@1.0_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.lpa@1.0_vendor.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.radio.qcrilhook@1.0_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.qcrilhook@1.0_vendor.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.radio.qtiradio@1.0_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.qtiradio@1.0_vendor.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.radio.uim@1.0_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.uim@1.0_vendor.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0_vendor.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0_vendor.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.hardware.tui_comm@1.0_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.tui_comm@1.0_vendor.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.ims.rcsconfig@1.0.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.imsrtpservice@1.0_vendor.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.latency@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.latency@2.0.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.latency@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.latency@2.0.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.voiceprint@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.voiceprint@1.0.so \
+    vendor/lge/msm8996-common/proprietary/vendor/radio/qcril_database/qcril.db:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/qcril.db
 
 PRODUCT_PACKAGES += \
-    gatekeeper.msm8996 \
-	HotwordEnrollmentOKGoogleWCD9335 \
-	HotwordEnrollmentTGoogleWCD9335 \
-	HotwordEnrollmentXGoogleWCD9335 \
-    keystore.msm8996 \
-    libaudio_log_utils \
+    libgpustats \
     libsdm-disp-vndapis \
     libthermalclient \
-    libqct_resampler \
+    DolbyVisionService \
+    QtiTelephonyService \
+    uceShimService \
+    WfdService \
+    com.qualcomm.location \
+    ims \
+    qcrilmsgtunnel \
+    CneApp \
     CneApp \
     IWlanService \
-    dpmserviceapp \
+    IWlanService \
     TimeService \
-    WfdService \
-    WfdCommon \
-    uceShimService \
-    ims \
-    QtiTelephonyService \
-    qcrilmsgtunnel \
-    libgpustats \
-    fingerprint.msm8996 \
-    DolbyVisionService
+    HotwordEnrollmentOKGoogleWCD9335 \
+    HotwordEnrollmentTGoogleWCD9335 \
+    HotwordEnrollmentXGoogleWCD9335 \
+    dpmserviceapp \
+    WfdCommon
