@@ -1,5 +1,5 @@
 # Copyright (C) 2016 The CyanogenMod Project
-# Copyright (C) 2017-2018 The LineageOS Project
+# Copyright (C) 2017-2020 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,95 +17,6 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter g6 h870 h872 us997 h870ds,$(TARGET_DEVICE)),)
+ifneq ($(filter zl1 x2,$(TARGET_DEVICE)),)
 
-ifeq ($(QCPATH),)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := fingerprint.msm8996
-LOCAL_MODULE_OWNER := lge
-LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/hw/fingerprint.msm8996.so
-LOCAL_SRC_FILES_32 := proprietary/vendor/lib/hw/fingerprint.msm8996.so
-LOCAL_MULTILIB := both
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_SUFFIX := .so
-LOCAL_MODULE_RELATIVE_PATH := hw
-LOCAL_PROPRIETARY_MODULE := true
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := DolbyVisionService
-LOCAL_MODULE_OWNER := lge
-LOCAL_SRC_FILES := proprietary/app/DolbyVisionService/DolbyVisionService.apk
-LOCAL_CERTIFICATE := platform
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := APPS
-LOCAL_DEX_PREOPT := false
-LOCAL_MODULE_SUFFIX := .apk
-LOCAL_PROPRIETARY_MODULE := true
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := gatekeeper.msm8996
-LOCAL_MODULE_OWNER := lge
-LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/hw/gatekeeper.msm8996.so
-LOCAL_SRC_FILES_32 := proprietary/vendor/lib/hw/gatekeeper.msm8996.so
-LOCAL_MULTILIB := both
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_SUFFIX := .so
-LOCAL_MODULE_RELATIVE_PATH := hw
-LOCAL_PROPRIETARY_MODULE := true
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := keystore.msm8996
-LOCAL_MODULE_OWNER := lge
-LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/hw/keystore.msm8996.so
-LOCAL_SRC_FILES_32 := proprietary/vendor/lib/hw/keystore.msm8996.so
-LOCAL_MULTILIB := both
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_SUFFIX := .so
-LOCAL_MODULE_RELATIVE_PATH := hw
-LOCAL_PROPRIETARY_MODULE := true
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := libaudio_log_utils
-LOCAL_MODULE_OWNER := lge
-LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libaudio_log_utils.so
-LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libaudio_log_utils.so
-LOCAL_MULTILIB := both
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_SUFFIX := .so
-LOCAL_PROPRIETARY_MODULE := true
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := libqct_resampler
-LOCAL_MODULE_OWNER := lge
-LOCAL_SRC_FILES := proprietary/vendor/lib/libqct_resampler.so
-LOCAL_MULTILIB := 32
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_SUFFIX := .so
-LOCAL_PROPRIETARY_MODULE := true
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := WfdService
-LOCAL_MODULE_OWNER := lge
-LOCAL_SRC_FILES := proprietary/priv-app/WfdService/WfdService.apk
-LOCAL_CERTIFICATE := platform
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := APPS
-LOCAL_DEX_PREOPT := false
-LOCAL_MODULE_SUFFIX := .apk
-LOCAL_PRIVILEGED_MODULE := true
-include $(BUILD_PREBUILT)
-
-endif
 endif
